@@ -22,6 +22,7 @@ public class Managers : Singleton<Managers>
         base.Awake();
         Pool.Init();
         Audio.Init();
+        Scene.Init();
     }
 
     private void FixedUpdate()

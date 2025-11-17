@@ -2,6 +2,21 @@ using UnityEngine;
 
 public static class Enums
 {
+    public enum SceneNumber
+    {
+        Start,
+        Main,
+        Game,
+        Count,
+    }
+    public enum Level
+    {
+        None,
+        Easy,
+        Normal,
+        Hard,
+    }
+
     public enum UIType
     {
         Permanent,
