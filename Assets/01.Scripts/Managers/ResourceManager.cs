@@ -1,27 +1,73 @@
+using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.ResourceManagement.ResourceLocations;
 using Object = UnityEngine.Object;
 
-
-// TODO : resources 폴더로 만드는 것도 한번 시도해보기, 의존성 낮추는 연습하기, 유니테스크 사용연습
-// 어드레서블을 사용한 리소스 매니저로 어드레서블에 등록할 시 반드시 이름을 프리펩 이름과 똑같이 맞춰줄 것
 public class ResourceManager
 {
+    private readonly Dictionary<string, List<string>> sceneKeys = new();
+
+    private Dictionary<string, Object> operations = new();
+
     /// <summary>
-    /// key값으로 작업물 로드 및 콜백 실행(실제 생성은 X)
+    /// 단일 리소스 로드용 메서드
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="path"></param>
+    /// <param name="onComplete"></param>
+    private async UniTask<T> LoadAsync<T>(string path, Action<T> onComplete = null) where T : Object
+    {
+        //이미 했던 작업이라면
+        if (operations.TryGetValue(path, out var operation))
+        {
+            var result = operation as T;
+            return result;
+        }
+
+        var oper = Resources.LoadAsync<T>(path);
+        await oper;
+        operations.Add(path, oper.asset);
+        onComplete?.Invoke(oper.asset as T);
+        return oper.asset as T;
+    }
+
+    /// <summary>
+    /// 단일 리소스 로드용 메서드
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    public T Load<T>(string path, Action<T> onComplete) where T : Object
+    {
+        if (operations.TryGetValue(path, out var op))
+            return op as T;
+
+        // LoadAsync를 동기적으로 기다림
+        var result = LoadAsync<T>(path, onComplete).GetAwaiter().GetResult();
+        return result;
+    }
+
+
+    /// <summary>
+    /// 경로의 오브젝트를 생성.
     /// </summary>
     /// <param name="key"></param>
     /// <param name="onComplete"></param>
-    public void Instantiate(string key, Action<GameObject> onComplete = null)
+    public async void Instantiate(string path, Action<GameObject> onComplete = null)
     {
-        Resources.LoadAsync<GameObject>(key).Completed += (handle) =>
+        GameObject obj = Managers.Pool.Get(path);
+        if (obj != null)
         {
-            onComplete?.Invoke(Instantiate(handle.Result));
-        };
+            onComplete?.Invoke(obj);
+            return;
+        }
+
+        await LoadAsync<GameObject>(path, prefab =>
+        {
+            GameObject newObj = Instantiate(prefab);
+            onComplete?.Invoke(newObj);
+        });
     }
 
     /// <summary>
@@ -53,24 +99,5 @@ public class ResourceManager
         }
 
         Object.Destroy(obj);
-    }
-
-    /// <summary>
-    /// 라벨명이 붙은 그룹 단위로 작업물 로드 (씬에 필요한 모든 리소스들 미리로드용)
-    /// </summary>
-    /// <param name="assetLabel"></param>
-    /// <param name="onComplete"></param>
-    public void LoadResourceLocationAsync(string assetLabel, Action onComplete = null)
-    {
-        if (operations.TryGetValue(assetLabel, out var operation))
-        {
-            onComplete?.Invoke();
-            return;
-        }
-
-        Addressables.LoadResourceLocationsAsync(assetLabel).Completed += (handle) =>
-        {
-            CreateGenericGroupOperation(handle, onComplete);
-        };
     }
 }

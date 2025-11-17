@@ -15,7 +15,7 @@ public class Pool
     /// <param name="parent"></param>
     public Pool(string key, Transform parent)
     {
-        Managers.Resource.LoadAssetAsync<GameObject>(key, original =>
+        Managers.Resource.Load<GameObject>(key, original =>
         {
             this.original = original;
         });

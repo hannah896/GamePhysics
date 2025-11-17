@@ -8,7 +8,7 @@ public abstract class SceneBase : StateBase
     /// </summary>
     public override void OnEnter()
     {
-        Managers.Resource.LoadResourceLocationAsync(nameof(Managers.Scene.CurrentState));
+        // TODO: 오디오 및 기타 씬 진입할때 필요한 리소스 로드, 초기화 작업 수행
     }
 
     /// <summary>
@@ -17,6 +17,5 @@ public abstract class SceneBase : StateBase
     public override void OnExit()
     {
         Managers.Audio.ChangeScene.Invoke();
-        Managers.Resource.Release(nameof(Managers.Scene.CurrentState));
     }
 }

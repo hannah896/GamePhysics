@@ -42,15 +42,20 @@ public class AudioController
     /// <param name="data"></param>
     public void SetData()
     {
-        for (int i = 0; i < (int)BGMName.Count; i++)
-        {
-            bgmData.Add((BGMName)i, Managers.Resource.GetAsT<BGMData>(((BGMName)i).ToString()));
-        }
+        //for (int i = 0; i < (int)BGMName.Count; i++)
+        //{
+        //    bgmData.Add(
+        //        (BGMName)i //브금 번호
+        //        , Managers.Resource.Load<BGMData> //브금 리소스 가져오기
+        //        (
+                    
+        //        ));
+        //}
 
-        for (int i = 0; i < (int)SFXName.Count; i++)
-        {
-            sfxData.Add((SFXName)i, Managers.Resource.GetAsT<SFXData>(((SFXName)i).ToString()));
-        }
+        //for (int i = 0; i < (int)SFXName.Count; i++)
+        //{
+        //    sfxData.Add((SFXName)i, Managers.Resource.Load<SFXData>(((SFXName)i).ToString()));
+        //}
     }
 
     /// <summary>
