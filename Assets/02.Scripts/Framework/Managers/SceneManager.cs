@@ -6,8 +6,9 @@ public class SceneManager : StateMachine<SceneBase>
     
     public void Init()
     {
-        CurrentState = new StartScene
+        CurrentState = new StartScene();
     }
+
     /// <summary>
     /// 씬 전환 메서드
     /// </summary>

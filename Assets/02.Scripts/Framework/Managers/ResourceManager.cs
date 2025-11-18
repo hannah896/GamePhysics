@@ -16,7 +16,7 @@ public class ResourceManager
     /// <typeparam name="T"></typeparam>
     /// <param name="path"></param>
     /// <param name="onComplete"></param>
-    private async UniTask<T> LoadAsync<T>(string path, Action<T> onComplete = null) where T : Object
+    public async UniTask<T> LoadAsync<T>(string path, Action<T> onComplete = null) where T : Object
     {
         //이미 했던 작업이라면
         if (operations.TryGetValue(path, out var operation))

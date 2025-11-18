@@ -20,20 +20,12 @@ public class AudioController
     {
         SetData();
 
-        Managers.Audio.ApplyMasterVolume += ApplySFXVolume;
-        Managers.Audio.ApplyMasterVolume += ApplyBGMVolume;
-        Managers.Audio.ApplySFXVolume += ApplySFXVolume;
-        Managers.Audio.ApplyBGMVolume += ApplyBGMVolume;
-
         Managers.Audio.ChangeScene += KillChildren;
 
         Master = new GameObject(nameof(Master));
         SFX = new GameObject(nameof(SFX));
         BGM = new GameObject(nameof(BGM));
-
-        MonoBehaviour.DontDestroyOnLoad(Master);
-        MonoBehaviour.DontDestroyOnLoad(SFX);
-        MonoBehaviour.DontDestroyOnLoad(BGM);
+        
     }
 
     /// <summary>

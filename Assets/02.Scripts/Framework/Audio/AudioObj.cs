@@ -21,7 +21,7 @@ public class AudioObj : Poolable
     /// <param name="isBGM">오디오를 루프시킬지 여부</param>
     public void Init<T>(T clip, bool isBGM = false) where T : ISound
     {
-        gameObject.SetActive(false); 
+        gameObject.SetActive(false);
         clip.AudioSource = audioSource;
         audioSource.clip = clip.AudioClip;
 

@@ -27,11 +27,11 @@ public class Managers : Singleton<Managers>
 
     private void FixedUpdate()
     {
-        Scene.FixedUpdate.Invoke();
+        Scene.FixedUpdate?.Invoke();
     }
 
     private void Update()
     {
-        Scene.Update.Invoke();
+        Scene.Update?.Invoke();
     }
 }
