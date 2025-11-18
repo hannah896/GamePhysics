@@ -10,7 +10,7 @@ public class UIPermanent : UIBase
 
     public override void Releases()
     {
-        Managers.UI.UIPermanentDIct.Remove(this);
+        Managers.UI.CloseStaticUI<UIPermanent>(this);
         base.Releases();
     }
 }

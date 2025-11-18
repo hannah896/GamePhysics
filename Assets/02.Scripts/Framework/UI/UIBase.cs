@@ -31,6 +31,11 @@ public abstract class UIBase : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        Init();
+    }
+
     /// <summary>
     /// UI매니저에 본인을 바인딩 시키는 것 구현해야함!!! 무조건
     /// </summary>

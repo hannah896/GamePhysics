@@ -18,10 +18,7 @@ public abstract class UIPopup : UIBase
 
     public override void Releases()
     {
-        if (Managers.UI.UIPopupDIct.TryGetValue(this, out Stack<GameObject> stack))
-        {
-            stack.Pop();
-        }
+        Managers.UI.ClosePopupUI<UIPopup>(this);
         base.Releases();
     }
 }

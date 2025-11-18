@@ -8,7 +8,7 @@ public abstract class SceneBase : StateBase
     /// </summary>
     public override void OnEnter()
     {
-        // TODO: 오디오 및 기타 씬 진입할때 필요한 리소스 로드, 초기화 작업 수행
+        Managers.UI.Init();
     }
 
     /// <summary>
@@ -16,6 +16,6 @@ public abstract class SceneBase : StateBase
     /// </summary>
     public override void OnExit()
     {
-        Managers.Audio.ChangeScene.Invoke();
+
     }
 }

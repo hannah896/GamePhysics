@@ -6,8 +6,6 @@ using static Enums;
 public class NewAudioManager
 {
     private AudioController controller = new();
-
-    public Action ChangeScene;
     public AudioMixer Mixer;
 
     /// <summary>
@@ -15,7 +13,6 @@ public class NewAudioManager
     /// </summary>
     public void Init()
     {
-        controller.Init();
         Mixer = Resources.Load<AudioMixer>("Assets/08.SO/Audio/Sound.mixer");
     }
 
@@ -47,23 +44,5 @@ public class NewAudioManager
     {
         float dB = Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20f;
         Mixer.SetFloat("SFX", dB);
-    }
-
-    /// <summary>
-    /// BGM 재생 메서드
-    /// </summary>
-    /// <param name="bgm"></param>
-    public void PlayBGM(BGMName bgm)
-    {
-        controller.CreateAudio(bgm);
-    }
-
-    /// <summary>
-    /// SFX 재생 메서드
-    /// </summary>
-    /// <param name="sfx"></param>
-    public void PlaySFX(SFXName sfx)
-    {
-        controller.CreateAudio(sfx);
     }
 }

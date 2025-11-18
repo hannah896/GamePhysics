@@ -27,6 +27,7 @@ public class ResourceManager
 
         var oper = Resources.LoadAsync<T>(path);
         await oper;
+
         operations.Add(path, oper.asset);
         onComplete?.Invoke(oper.asset as T);
         return oper.asset as T;
@@ -63,11 +64,9 @@ public class ResourceManager
             return;
         }
 
-        await LoadAsync<GameObject>(path, prefab =>
-        {
-            GameObject newObj = Instantiate(prefab);
-            onComplete?.Invoke(newObj);
-        });
+        await LoadAsync<GameObject>(path);
+        GameObject newObj = Instantiate(operations[path] as GameObject);
+        onComplete?.Invoke(newObj);
     }
 
     /// <summary>
