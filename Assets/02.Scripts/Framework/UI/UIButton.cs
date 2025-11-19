@@ -26,6 +26,6 @@ public abstract class UIButton : UIPermanent
 
     public virtual void OnClickButton(int value)
     {
-
+        Managers.Game.Correct();
     }
 }

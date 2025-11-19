@@ -43,7 +43,7 @@ public class AudioController
             return;
         }
 
-        Managers.Resource.Instantiate("AudioObj", go =>
+        Managers.Resource.Instantiate("BGMObj", go =>
         {
             var audio = go.GetComponent<AudioObj>();
             bgmAudioSource = audio.audioSource;
@@ -67,7 +67,7 @@ public class AudioController
         }
 
         Util.Log("재생버튼은 눌렸음!!!!!!");
-        Managers.Resource.Instantiate("AudioObj", go =>
+        Managers.Resource.Instantiate("SFXObj", go =>
         {
             Util.Log("오디오 오브젝트 생성 완료!!!!!!");
             var audio = go.GetComponent<AudioObj>();
