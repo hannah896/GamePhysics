@@ -54,11 +54,13 @@ public static class Enums
 
     public enum SFXName
     {
+        Click,
         Count,
     }
 
     public enum BGMName
     {
+        Dance,
         Count,
     }
 }

@@ -5,15 +5,15 @@ using static Enums;
 
 public class NewAudioManager
 {
-    private AudioController controller = new();
+    public AudioController Controller = new();
     public AudioMixer Mixer;
 
     /// <summary>
     /// 오디오 매니저 초기화 메서드
     /// </summary>
-    public void Init()
+    public void Init(AudioMixer mixer)
     {
-        Mixer = Resources.Load<AudioMixer>("Assets/08.SO/Audio/Sound.mixer");
+        Mixer = mixer;
     }
 
     /// <summary>

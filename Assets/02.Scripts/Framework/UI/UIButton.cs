@@ -21,7 +21,7 @@ public abstract class UIButton : UIPermanent
 
     public virtual void OnClickButton()
     {
-        
+        Managers.Audio.Controller.PlaySFX(Enums.SFXName.Click);
     }
 
     public virtual void OnClickButton(int value)

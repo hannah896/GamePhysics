@@ -28,6 +28,13 @@ public class ResourceManager
         var oper = Resources.LoadAsync<T>(path);
         await oper;
 
+        if (oper.asset == null)
+        {
+            Debug.LogError($"{path}에 그딴 에셋 없다 ");
+            onComplete?.Invoke(null);
+            return oper.asset as T;
+        }
+
         operations.Add(path, oper.asset);
         onComplete?.Invoke(oper.asset as T);
         return oper.asset as T;
@@ -39,7 +46,7 @@ public class ResourceManager
     /// <typeparam name="T"></typeparam>
     /// <param name="path"></param>
     /// <returns></returns>
-    public T Load<T>(string path, Action<T> onComplete) where T : Object
+    public T Load<T>(string path, Action<T> onComplete = null) where T : Object
     {
         if (operations.TryGetValue(path, out var op))
             return op as T;
