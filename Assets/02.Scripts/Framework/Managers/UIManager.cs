@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 using static Enums;
 
@@ -22,18 +23,18 @@ public class UIManager
     /// </summary>
     public void Init()
     {
-        Managers.Resource.Instantiate("StaticUICanvas", go =>
+        Managers.Resource.Instantiate("Common/StaticUICanvas", go =>
         {
             StaticUICanvas = go.GetComponent<Canvas>();
             RectUIPermanent = go.transform as RectTransform;
         });
 
-        Managers.Resource.Instantiate("DynamicUICanvas", go =>
+        Managers.Resource.Instantiate("Common/DynamicUICanvas", go =>
         {
             DynamicUICanvas = go.GetComponent<Canvas>();
             RectUIPopup = go.transform as RectTransform;
         });
-        Managers.Resource.Instantiate("EventSystem");
+        Managers.Resource.Instantiate("Common/EventSystem");
     }
 
     /// <summary>

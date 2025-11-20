@@ -72,7 +72,7 @@ public class ResourceManager
         }
 
         await LoadAsync<GameObject>(path);
-        GameObject newObj = Instantiate(operations[path] as GameObject);
+        GameObject newObj = Instantiate(operations[path] as GameObject);    
         onComplete?.Invoke(newObj);
     }
 

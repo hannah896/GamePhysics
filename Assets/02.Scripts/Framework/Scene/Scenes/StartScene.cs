@@ -14,9 +14,14 @@ public class StartScene : SceneBase
 
         //UI 로드
         Managers.Resource.LoadAsync<GameObject>("StartScene/StartUI", go =>
-        {
+            {
             Managers.UI.path.Add(go.name, "StartScene/StartUI");
             Managers.UI.ShowUI(go.name);
+        });
+
+        Managers.Resource.LoadAsync<GameObject>("Common/BG", go =>
+        {
+
         });
 
         //Audio 믹서 로드
