@@ -2,19 +2,19 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIBack : UI_Button
+public class UIOption : UI_Button
 {
-    [SerializeField] private Button BackUI;
+    [SerializeField] private Button OptionBtn;
 
     public override void Init()
     {
-        button = BackUI;
+        button = OptionBtn;
         base.Init();
     }
 
     public override void OnClickButton()
     {
         base.OnClickButton();
-        transform.parent.parent.DOMoveX(285, 0.5f).SetEase(Ease.OutExpo);
+        Managers.UI.ShowUI<AudioSettingUI>();
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
@@ -41,11 +42,12 @@ public class UIManager
     /// 컴포넌트로 UI 생성 및 캔버스 배치
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public void ShowUI<T>(bool isStatic = false) where T: UIBase
+    public void ShowUI<T>(bool isStatic = false) where T: UI_Base
     {
         Util.Log(typeof(T).Name);
-
-        if (!path.TryGetValue(path[typeof(T).Name], out string _path))
+        Util.Log(path[typeof(T).Name] + "인데 키 이름은 이거기는해");
+        
+        if (!path.TryGetValue(typeof(T).Name, out string _path))
         {
             Util.LogError("해당 컴포넌트 경로 미등록");
             return;
@@ -106,12 +108,12 @@ public class UIManager
     {
         if (isStatic)
         {
-            go.transform.SetParent(RectUIPermanent);
+            go.transform.SetParent(RectUIPermanent, false);
             go.transform.localPosition = Vector3.zero;
         }
         else
         {
-            go.transform.SetParent(RectUIPopup);
+            go.transform.SetParent(RectUIPopup, false);
             go.transform.localPosition = Vector3.zero;
         }
     }

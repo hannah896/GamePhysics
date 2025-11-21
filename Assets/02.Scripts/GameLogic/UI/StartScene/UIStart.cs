@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIStart : UIButton
+public class UIStart : UI_Button
 {
     [SerializeField] private Button StartUI;
 

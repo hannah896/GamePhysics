@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIPermanent : UIBase
+public class UIPermanent : UI_Base
 {
     public override void Init()
     {

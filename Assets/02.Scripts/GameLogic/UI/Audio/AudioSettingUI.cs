@@ -1,29 +1,44 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AudioSettingUI : UIPopup
+public class AudioSettingUI : UIPanel
 {
-    [SerializeField] private AudioSliderUI ALLScrollbar;
-    [SerializeField] private AudioSliderUI BGMScrollbar;
-    [SerializeField] private AudioSliderUI SFXScrollbar;
+    [SerializeField] private AudioSliderUI ALLSlider;
+    [SerializeField] private AudioSliderUI BGMSlider;
+    [SerializeField] private AudioSliderUI SFXSlider;
 
     public override void Init()
     {
         base.Init();
 
-        UIBase.BindEvent(ALLScrollbar.gameObject, evt =>
-        {
-            ALLScrollbar.SetALL(ALLScrollbar.Targetvalue);
-        }, Enums.UIEvent.Drag);
+        //UI_Base.BindEvent(ALLSlider.gameObject, evt =>
+        //{
+        //    ALLSlider.SetALL(ALLSlider.Targetvalue);
+        //}, Enums.UIEvent.Drag);
 
-        UIBase.BindEvent(BGMScrollbar.gameObject, evt =>
+        //UI_Base.BindEvent(BGMSlider.gameObject, evt =>
+        //{
+        //    BGMSlider.SetBGM(BGMSlider.Targetvalue);
+        //}, Enums.UIEvent.Drag);
+
+        //UI_Base.BindEvent(SFXSlider.gameObject, evt =>
+        //{
+        //    SFXSlider.SetSFX(SFXSlider.Targetvalue);
+        //}, Enums.UIEvent.Drag);
+
+        ALLSlider.Slider.onValueChanged.AddListener((value) =>
         {
-            BGMScrollbar.SetBGM(BGMScrollbar.Targetvalue);
-        }, Enums.UIEvent.Drag);
+            ALLSlider.SetALL(value);
+        });
         
-        UIBase.BindEvent(SFXScrollbar.gameObject, evt =>
+        BGMSlider.Slider.onValueChanged.AddListener((value) =>
         {
-            SFXScrollbar.SetSFX(SFXScrollbar.Targetvalue);
-        }, Enums.UIEvent.Drag);
+            BGMSlider.SetBGM(value);
+        });
+
+        SFXSlider.Slider.onValueChanged.AddListener((value) =>
+        {
+            SFXSlider.SetSFX(value);
+        });
     }
 }

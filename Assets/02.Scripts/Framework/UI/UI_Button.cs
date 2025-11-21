@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using static Enums;
 
 [RequireComponent(typeof(Button))]
-public abstract class UIButton : UIPermanent
+public abstract class UI_Button : UIPermanent
 {
     protected Button button;
     protected int targetValue; 
@@ -26,7 +26,7 @@ public abstract class UIButton : UIPermanent
     public override void Init()
     {
         base.Init();
-        UIBase.BindEvent(gameObject, evt =>
+        UI_Base.BindEvent(gameObject, evt =>
         {
             // 기존 첫 번째 기능
             OnClickButton();

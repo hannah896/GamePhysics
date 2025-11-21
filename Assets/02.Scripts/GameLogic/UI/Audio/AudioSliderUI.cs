@@ -3,13 +3,9 @@ using UnityEngine.UI;
 
 public class AudioSliderUI : UIPermanent
 {
-    [SerializeField] private Scrollbar scroll;
-    public float Targetvalue { get { return scroll.value; } }
-
-    private void Awake()
-    {
-        Init();
-    }
+    [SerializeField] private Slider slider;
+    public float Targetvalue { get { return slider.value; } }
+    public Slider Slider { get { return slider; } }
 
     public override void Init()
     {
@@ -18,16 +14,16 @@ public class AudioSliderUI : UIPermanent
 
     public void SetALL(float value)
     {
-        Managers.Audio.SetMasterVolume(value);
+        Managers.Audio.SetVolume(Enums.SoundType.Master, value);
     }
     
     public void SetBGM(float value)
     {
-        Managers.Audio.SetBGMVolume(value);
+        Managers.Audio.SetVolume(Enums.SoundType.BGM, value);
     }
 
     public void SetSFX(float value)
     {
-        Managers.Audio.SetSFXVolume(value);
+        Managers.Audio.SetVolume(Enums.SoundType.SFX, value);
     }
 }

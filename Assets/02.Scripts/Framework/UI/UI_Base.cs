@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using static Enums;
 
-public abstract class UIBase : MonoBehaviour
+public abstract class UI_Base : MonoBehaviour
 {
     /// <summary>
     /// 자기 자신에게 붙은 ui 이벤트를 바인딩함.
