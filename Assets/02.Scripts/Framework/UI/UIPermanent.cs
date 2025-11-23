@@ -5,12 +5,17 @@ public class UIPermanent : UI_Base
 {
     public override void Init()
     {
-        Managers.UI.UIPermanentDIct.Add(this, gameObject);
+        if (!Managers.UI.UIPermanentDIct.TryGetValue(GetType(), out List<GameObject> list))
+        {
+            Managers.UI.UIPermanentDIct.Add(GetType(), new List<GameObject>());
+            list = Managers.UI.UIPermanentDIct[GetType()];
+        }
+        list.Add(gameObject);
     }
 
     public override void Releases()
     {
-        Managers.UI.CloseStaticUI<UIPermanent>(this);
+        Managers.UI.CloseStaticUI(GetType(), gameObject);
         base.Releases();
     }
 }

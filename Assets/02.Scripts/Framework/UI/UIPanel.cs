@@ -6,10 +6,12 @@ public class UIPanel : UIPopup
     public override void Init()
     {
         base.Init();
-        Managers.Resource.Instantiate(Managers.UI.path["BG"], go =>
+        Managers.UI.ShowUI<UI_BG>(false, go =>
         {
-            go.transform.SetParent(transform);
+            transform.SetParent(go.transform, false);
+            Util.Log(transform.parent.ToString());
             Util.Log("BG 생성되나요");
+            go.GetComponent<UI_BG>().child = GetType();
         });
     }
 

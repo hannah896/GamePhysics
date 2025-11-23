@@ -15,17 +15,16 @@ public class StartScene : SceneBase
         //UI 로드
         _ = Managers.Resource.LoadAsync<GameObject>("StartScene/StartUI", go =>
         {
-            Managers.UI.path.Add(go.name, "StartScene/StartUI");
-            Managers.UI.ShowUI(go.name);
+            Managers.UI.path.Add(typeof(UIStart), "StartScene/StartUI");
+            Managers.UI.ShowUI<UIStart>();
         });
 
         _ = Managers.Resource.LoadAsync<GameObject>("Common/AudioSettingUI", go =>
         {
-            Managers.UI.path.Add(go.name, "Common/AudioSettingUI");
-            Util.Log($"{go.name} 나 등록했다고 개억울하다고");
+            Managers.UI.path.Add(typeof(AudioSettingUI), "Common/AudioSettingUI");
             _ = Managers.Resource.LoadAsync<GameObject>("Common/BG", go =>
             {
-                Managers.UI.path.Add(go.name, "Common/BG");
+                Managers.UI.path.Add(typeof(UI_BG), "Common/BG");
             });
         });
 

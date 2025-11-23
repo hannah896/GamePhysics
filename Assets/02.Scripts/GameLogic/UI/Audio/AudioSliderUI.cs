@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AudioSliderUI : UIPermanent
+public class AudioSliderUI : UIPopup
 {
     [SerializeField] private Slider slider;
     public float Targetvalue { get { return slider.value; } }

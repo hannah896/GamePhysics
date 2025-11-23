@@ -5,6 +5,8 @@ using static Enums;
 public class UI_BG : UI_Button
 {
     [SerializeField] private Button BG;
+    public System.Type child;
+
     public override void Init()
     {
         base.Init();
@@ -17,6 +19,7 @@ public class UI_BG : UI_Button
     public override void OnClickButton()
     {
         base.OnClickButton();
-        Managers.Resource.Destroy(gameObject);
+        Managers.UI.CloseStaticUI(GetType(), gameObject);
+        Managers.UI.ClosePopupUI(child);
     }
 }

@@ -5,20 +5,22 @@ public abstract class UIPopup : UI_Base
 {
     public override void Init()
     {
-        if (Managers.UI.UIPopupDIct.TryGetValue(this, out Stack<GameObject> stack))
+        var type = GetType();
+        
+        if (Managers.UI.UIPopupDIct.TryGetValue(type, out Stack<GameObject> stack))
         {
             stack.Push(gameObject);
         }
         else
         {
-            Managers.UI.UIPopupDIct.Add(this, new Stack<GameObject>());
-            Managers.UI.UIPopupDIct[this].Push(gameObject);
+            Managers.UI.UIPopupDIct.Add(type, new Stack<GameObject>());
+            Managers.UI.UIPopupDIct[type].Push(gameObject);
         }
     }
 
     public override void Releases()
     {
-        Managers.UI.ClosePopupUI<UIPopup>(this);
+        Managers.UI.ClosePopupUI(GetType());
         base.Releases();
     }
 }
