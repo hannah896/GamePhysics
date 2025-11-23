@@ -22,6 +22,13 @@ public class AudioObj : Poolable
     public void SFXPlay()
     {
         Util.Log("내가 재생을 시켜볼게~");
-        audioSource.PlayOneShot(audioSource.clip);
+        var clip = audioSource.clip;
+        audioSource.Play();
+        Invoke("Remove", clip.length + 1.0f);
+    }
+
+    private void Remove()
+    {
+        Managers.Resource.Destroy(gameObject);
     }
 }
