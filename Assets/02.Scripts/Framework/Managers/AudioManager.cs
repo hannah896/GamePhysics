@@ -23,6 +23,7 @@ public class AudioManager
         Managers.Resource.LoadAsync<VolumeDate>("VolumeDate", volumeData =>
         {
             data = volumeData;
+            SettingData();
         });
     }
 

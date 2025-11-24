@@ -31,6 +31,5 @@ public class Managers : Singleton<Managers>
     private void Update()
     {
         Scene.Update?.Invoke();
-        float v;
     }
 }
