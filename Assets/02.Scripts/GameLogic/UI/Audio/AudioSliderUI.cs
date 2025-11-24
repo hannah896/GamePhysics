@@ -26,4 +26,9 @@ public class AudioSliderUI : UIPopup
     {
         Managers.Audio.SetVolume(Enums.SoundType.SFX, value);
     }
+
+    public void SetValue(float value)
+    {
+        slider.value = value;
+    }
 }

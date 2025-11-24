@@ -26,6 +26,8 @@ public class AudioSettingUI : UIPanel
         //    SFXSlider.SetSFX(SFXSlider.Targetvalue);
         //}, Enums.UIEvent.Drag);
 
+
+
         ALLSlider.Slider.onValueChanged.AddListener((value) =>
         {
             ALLSlider.SetALL(value);
@@ -40,5 +42,9 @@ public class AudioSettingUI : UIPanel
         {
             SFXSlider.SetSFX(value);
         });
+
+        ALLSlider.SetValue(Managers.Audio.Data.ALL);
+        BGMSlider.SetValue(Managers.Audio.Data.BGM);
+        SFXSlider.SetValue(Managers.Audio.Data.SFX);
     }
 }
