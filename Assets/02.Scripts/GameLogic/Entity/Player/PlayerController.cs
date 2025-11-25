@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     #region PlayerInfo
     public float Speed = 5f;
+    public float Sensitivity = 0.2f;
     #endregion
-    
+
     public PlayerAnimationData AnimData { get; set; } = new();
     
     #region Component

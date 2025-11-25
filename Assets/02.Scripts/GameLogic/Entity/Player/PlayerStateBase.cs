@@ -16,6 +16,7 @@ public class PlayerStateBase : StateBase
 
     protected int animHashKey;
     protected float speed = 0.0f;
+    private float sensitivity = 0.2f;
 
 
     public PlayerStateBase(StateMachine<PlayerStateBase> stateMachine, int animHashKey, PlayerController controller)
@@ -30,6 +31,7 @@ public class PlayerStateBase : StateBase
         animData = controller.AnimData;
         StateMachine = stateMachine;
         speed = controller.Speed;
+        sensitivity = controller.Sensitivity;
     }
 
     public override void OnEnter()
@@ -49,6 +51,13 @@ public class PlayerStateBase : StateBase
 
     public override void FixedUpdate()
     {
-
+        if (Input.mousePositionDelta != Vector3.zero)
+        {
+            if (Input.mousePositionDelta.x < 0)
+                rb.MoveRotation(rb.rotation * Quaternion.Euler(Vector3.down * Vector3.Magnitude(Input.mousePositionDelta) * sensitivity));
+            if (Input.mousePositionDelta.x > 0)
+                rb.MoveRotation(rb.rotation * Quaternion.Euler(Vector3.up * Vector3.Magnitude(Input.mousePositionDelta) * sensitivity));
+        }
+            
     }
 }

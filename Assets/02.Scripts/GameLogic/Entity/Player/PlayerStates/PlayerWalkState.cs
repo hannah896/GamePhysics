@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class PlayerWalkState : PlayerStateBase
 {
-    private float speed = 20.0f;
+    private float speed = 5.0f;
+    private float x;
+    private float z;
 
     public PlayerWalkState(StateMachine<PlayerStateBase> stateMachine, int animHashKey, PlayerController controller) : base(stateMachine, animHashKey, controller)
     {
@@ -21,8 +23,17 @@ public class PlayerWalkState : PlayerStateBase
 
     public override void FixedUpdate()
     {
+        base.FixedUpdate();
 
+        Vector3 move = Vector3.zero;
+
+        // 입력은 Update에서 받아왔다고 가정(h, v)
+        move += x * transform.right;
+        move += z * transform.forward;
+
+        rb.MovePosition(rb.position + move * speed * Time.fixedDeltaTime);
     }
+
 
     public override void Update()
     {
@@ -41,19 +52,8 @@ public class PlayerWalkState : PlayerStateBase
             return;
         }
 
-        Vector3 move = Vector3.zero;
-
-        if (Input.GetAxis("Horizontal") != 0)
-        {
-            move += Input.GetAxis("Horizontal") * Vector3.right;
-        }
-
-        if (Input.GetAxis("Vertical") != 0)
-        {
-            move += Input.GetAxis("Vertical") * Vector3.forward;
-        }
-
-        rb.MovePosition(transform.position + move * Time.deltaTime * speed);
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
     }
 
 }

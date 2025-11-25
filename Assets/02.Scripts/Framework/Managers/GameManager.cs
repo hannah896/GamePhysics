@@ -9,6 +9,9 @@ public class GameManager
 
     public int CurrentCount { get; set; }
 
+    public GameObject NextMap { get; set; }
+
+
     public void Init(Level level = Level.None)
     {
         this.level = level;
