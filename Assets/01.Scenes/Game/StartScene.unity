@@ -292,6 +292,18 @@ PrefabInstance:
       propertyPath: m_Lightmapping
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -4040989756702417673, guid: f63ee970fdc415b489b90da311006256, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: -4040989756702417673, guid: f63ee970fdc415b489b90da311006256, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4040989756702417673, guid: f63ee970fdc415b489b90da311006256, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.54
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f63ee970fdc415b489b90da311006256, type: 3}
       propertyPath: m_Name
       value: Brand new Study Room
