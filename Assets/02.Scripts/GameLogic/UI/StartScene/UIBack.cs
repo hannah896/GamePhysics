@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIBack : UIButton
+public class UIBack : UI_Button
 {
     [SerializeField] private Button BackUI;
 

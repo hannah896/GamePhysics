@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using static Enums;
 
-public class UILevel : UIButton
+public class UILevel : UI_Button
 {
     [SerializeField] private Button Easy;
     [SerializeField] private Button Normal;

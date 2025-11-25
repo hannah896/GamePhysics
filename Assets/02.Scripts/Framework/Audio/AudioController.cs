@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using VInspector.Libs;
 using static Enums;
 
 public class AudioController
@@ -19,6 +20,7 @@ public class AudioController
             bgmData.Add(bgm._name, bgm._audioClip);
         }
         PlayBGM(startBGM);
+        Managers.Audio.SettingData();
     }
 
 
@@ -49,8 +51,9 @@ public class AudioController
             bgmAudioSource = audio.audioSource;
 
             audio.Init(bgm);
-            go.GetComponent<AudioSource>().loop = true;
+            audio.audioSource.loop = true;
             bgmAudioSource.Play();
+            Managers.Audio.SettingData();
         });
     }
 

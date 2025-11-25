@@ -59,6 +59,8 @@ public class Pool
     /// <param name="obj"></param>
     private void ActionOnGet(GameObject obj)
     {
+        if (obj == null)
+            return;
         obj.SetActive(true);
     }
 

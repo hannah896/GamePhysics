@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Managers : Singleton<Managers>
 {
-    public static readonly NewAudioManager Audio = new();
+    public static readonly AudioManager Audio = new();
     //public static readonly CameraManager Camera = new();
     public static readonly GameManager Game = new();
-    //public static readonly InputManager Input = new();
     public static readonly PoolManager Pool = new();
     public static readonly ResourceManager Resource = new();
     public static readonly SceneManager Scene = new();

@@ -45,7 +45,7 @@ public class PoolManager
         if (pools.TryGetValue(key, out var pool) == false)
         {
             //UI 전용 풀
-            if (poolable.TryGetComponent<UIBase>(out var ui))
+            if (poolable.TryGetComponent<UI_Base>(out var ui))
                 pool = new(key, rectTransform);
 
             // 일반 오브젝트용 풀

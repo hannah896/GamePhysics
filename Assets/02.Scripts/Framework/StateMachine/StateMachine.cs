@@ -19,6 +19,7 @@ public class StateMachine<T> where T: StateBase
 
     public virtual void ChangeState(T Nextstate) 
     {
+        Util.Log($"State Change : {CurrentState?.GetType().Name} -> {Nextstate?.GetType().Name}");
         CurrentState?.OnExit();
         Update -= CurrentState.Update;
         FixedUpdate -= CurrentState.FixedUpdate;
