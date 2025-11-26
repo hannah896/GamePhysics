@@ -2,11 +2,16 @@ using UnityEngine;
 
 public static class Enums
 {
+    public enum Stage
+    {
+        Correct,
+        Trap1,
+        Count,
+    }
     public enum SceneNumber
     {
         Start,
-        Main,
-        Game,
+        Correct,
         Count,
     }
     public enum Level
@@ -62,5 +67,11 @@ public static class Enums
     {
         Dance,
         Count,
+    }
+
+    public enum DoorPivot
+    {
+        Left = -210,
+        Right = 210,
     }
 }

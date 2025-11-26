@@ -21,6 +21,6 @@ public class SceneManager : StateMachine<SceneBase>
         CurrentState.OnExit();
 
         base.ChangeState(Nextstate);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(nameof(StartScene));
+        UnityEngine.SceneManagement.SceneManager.LoadScene((int)Nextstate.num);
     }
 }

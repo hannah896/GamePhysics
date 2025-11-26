@@ -16,15 +16,12 @@ public class AudioManager
     /// <summary>
     /// 오디오 매니저 초기화 메서드
     /// </summary>
-    public void Init(AudioMixer mixer)
+    public void Init(AudioMixer mixer, VolumeDate data)
     {
         Mixer = mixer;
+        this.data = data;
 
-        Managers.Resource.LoadAsync<VolumeDate>("VolumeDate", volumeData =>
-        {
-            data = volumeData;
-            SettingData();
-        });
+        SettingData();
     }
 
     public void SettingData()
@@ -36,20 +33,31 @@ public class AudioManager
 
     public void SetVolume(SoundType type, float value)
     {
-        Util.Log(type.ToString() + "값 변경됨. =>" + value);
         float dB = Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20f;
         switch (type)
         {
             case SoundType.Master:
                 Mixer.SetFloat("Master", dB);
+                
+                Mixer.GetFloat("Master", out float val);
+                Util.Log(val.ToString());
+                
                 data.ALL = value;
                 break;
             case SoundType.BGM:
                 Mixer.SetFloat("BGM", dB);
+
+                Mixer.GetFloat("BGM", out float v);
+                Util.Log(v.ToString());
+                
                 data.BGM = value;
                 break;
             case SoundType.SFX:
                 Mixer.SetFloat("SFX", dB);
+
+                Mixer.GetFloat("SFX", out float va);
+                Util.Log(va.ToString());
+
                 data.SFX = value;
                 break;
         }

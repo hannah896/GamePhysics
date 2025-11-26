@@ -9,6 +9,7 @@ TagManager:
   - UIPermanent
   - UICanvas
   - UIPanel
+  - Professor
   layers:
   - Default
   - TransparentFX
@@ -41,7 +42,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Interactable
   m_SortingLayers:
   - name: Default
     uniqueID: 0

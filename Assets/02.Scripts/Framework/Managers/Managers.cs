@@ -21,6 +21,9 @@ public class Managers : Singleton<Managers>
         base.Awake();
         Pool.Init();
         Scene.Init();
+
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
     }
 
     private void FixedUpdate()

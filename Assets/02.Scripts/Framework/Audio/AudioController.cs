@@ -18,8 +18,8 @@ public class AudioController
         {
             bgmData.Add(bgm._name, bgm._audioClip);
         }
-        PlayBGM(startBGM);
         Managers.Audio.SettingData();
+        PlayBGM(startBGM);
     }
 
 
@@ -36,7 +36,7 @@ public class AudioController
     /// BGM 재생
     /// </summary>
     /// <param name="bgmName"></param>
-    public void PlayBGM(BGMName bgmName)
+    public async void PlayBGM(BGMName bgmName)
     {
         if (!bgmData.TryGetValue(bgmName, out AudioClip bgm))
         {
@@ -48,11 +48,19 @@ public class AudioController
         {
             var audio = go.GetComponent<AudioObj>();
             bgmAudioSource = audio.audioSource;
+            
+            audio.audioSource.outputAudioMixerGroup  = Managers.Audio.Mixer.FindMatchingGroups("BGM")[0];
+            Managers.Audio.SettingData();
+            // 3. Mixer 파라미터 실제로 적용됐는지 확인 (선택)
+            float v;
+            Managers.Audio.Mixer.GetFloat("BGM", out v);
+            Debug.Log("적용된 BGMVolume(dB): " + v);
 
             audio.Init(bgm);
             audio.audioSource.loop = true;
+            
             bgmAudioSource.Play();
-            Managers.Audio.SettingData();
+            //
         });
     }
 

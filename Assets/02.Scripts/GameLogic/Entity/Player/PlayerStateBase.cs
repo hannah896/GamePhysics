@@ -1,4 +1,6 @@
+using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem.XR;
 
 public class PlayerStateBase : StateBase
@@ -16,8 +18,9 @@ public class PlayerStateBase : StateBase
 
     protected int animHashKey;
     protected float speed = 0.0f;
+    private float sensitivity = 0.2f;
 
-
+    private float RotSum = 0f;
     public PlayerStateBase(StateMachine<PlayerStateBase> stateMachine, int animHashKey, PlayerController controller)
     {
         StateMachine = stateMachine;
@@ -30,6 +33,7 @@ public class PlayerStateBase : StateBase
         animData = controller.AnimData;
         StateMachine = stateMachine;
         speed = controller.Speed;
+        sensitivity = controller.Sensitivity;
     }
 
     public override void OnEnter()
@@ -42,13 +46,23 @@ public class PlayerStateBase : StateBase
         Anim.SetBool(animHashKey, false);
     }
 
-    public override void Update()
-    {
-
-    }
-
     public override void FixedUpdate()
     {
-
+        if (RotSum != 0)
+        {
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, RotSum, 0f));
+            RotSum = 0; // 초기화
+        }
     }
+
+    public override void Update()
+    {
+        Vector2 delta = Input.mousePositionDelta;
+
+        float rotX = delta.x * sensitivity;
+
+        // 누적만 Update에서 하고
+        RotSum += rotX;
+    }
+
 }

@@ -7,12 +7,17 @@ using static Enums;
 
 public class StartScene : SceneBase
 {
+    // 생성자에서 상속받은 필드에 값 할당
+    public StartScene()
+    {
+        num = SceneNumber.Start;
+    }
 
     public async override void OnEnter()
     {
         base.OnEnter();
 
-        //UI 로드
+        // UI 로드
         _ = Managers.Resource.LoadAsync<GameObject>("StartScene/StartUI", go =>
         {
             Managers.UI.path.Add(typeof(UIStart), "StartScene/StartUI");
@@ -28,18 +33,21 @@ public class StartScene : SceneBase
             });
         });
 
-        //Audio 믹서 로드
-        _ = Managers.Resource.LoadAsync<AudioMixer>("Sound", mixer =>
+        // Audio 믹서 로드
+        await Managers.Resource.LoadAsync<AudioMixer>("Sound", async mixer =>
         {
-            Managers.Audio.Init(mixer);
+            await Managers.Resource.LoadAsync<VolumeDate>("VolumeDate", volumeData =>
+            {
+                Managers.Audio.Init(mixer, volumeData);
+            });
         });
 
-        //BGM, SFX 로드
-        _ = Managers.Resource.LoadAsync<SceneBGM>("Start/StartBGM", so =>
+        // BGM, SFX 로드
+        await Managers.Resource.LoadAsync<SceneBGM>("Start/StartBGM", so =>
         {
             Managers.Audio.Controller.InitBGM(so, BGMName.Dance);
         });
-        _ = Managers.Resource.LoadAsync<SceneSFX>("Start/StartSFX", so =>
+        await Managers.Resource.LoadAsync<SceneSFX>("Start/StartSFX", so =>
         {
             Managers.Audio.Controller.InitSFX(so);
         });
