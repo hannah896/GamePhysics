@@ -36,6 +36,7 @@ public class PlayerRunState : PlayerStateBase
 
     public override void Update()
     {
+        base.Update();
         // 가만히 있으면 idle상태로 변경
         if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
         {

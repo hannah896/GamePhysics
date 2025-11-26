@@ -19,7 +19,6 @@ public class CorrectScene : SceneBase
     }
 
 
-
     public override void FixedUpdate()
     {
     }

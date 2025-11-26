@@ -68,4 +68,10 @@ public static class Enums
         Dance,
         Count,
     }
+
+    public enum DoorPivot
+    {
+        Left = -210,
+        Right = 210,
+    }
 }

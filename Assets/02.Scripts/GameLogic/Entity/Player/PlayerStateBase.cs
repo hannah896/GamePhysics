@@ -20,7 +20,7 @@ public class PlayerStateBase : StateBase
     protected float speed = 0.0f;
     private float sensitivity = 0.2f;
 
-
+    private float RotSum = 0f;
     public PlayerStateBase(StateMachine<PlayerStateBase> stateMachine, int animHashKey, PlayerController controller)
     {
         StateMachine = stateMachine;
@@ -46,20 +46,23 @@ public class PlayerStateBase : StateBase
         Anim.SetBool(animHashKey, false);
     }
 
-    public override void Update()
-    {
-
-    }
-
     public override void FixedUpdate()
     {
-        if (Input.mousePositionDelta != Vector3.zero)
+        if (RotSum != 0)
         {
-            if (Input.mousePositionDelta.x < 0)
-                rb.MoveRotation(rb.rotation * Quaternion.Euler(Vector3.down * Vector3.Magnitude(Input.mousePositionDelta) * sensitivity));
-            if (Input.mousePositionDelta.x > 0)
-                rb.MoveRotation(rb.rotation * Quaternion.Euler(Vector3.up * Vector3.Magnitude(Input.mousePositionDelta) * sensitivity));
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, RotSum, 0f));
+            RotSum = 0; // 초기화
         }
-            
     }
+
+    public override void Update()
+    {
+        Vector2 delta = Input.mousePositionDelta;
+
+        float rotX = delta.x * sensitivity;
+
+        // 누적만 Update에서 하고
+        RotSum += rotX;
+    }
+
 }

@@ -37,6 +37,7 @@ public class PlayerWalkState : PlayerStateBase
 
     public override void Update()
     {
+        base.Update();
         // 가만히 있으면 대기 상태
         if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
         {

@@ -27,6 +27,7 @@ public class PlayerIdleState : PlayerStateBase
 
     public override void Update()
     {
+        base.Update();
         // 시프트 누르면 달리기 상태
         if ((Input.GetKeyDown(KeyCode.LeftShift) && Input.GetAxis("Horizontal") != 0)
             || (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetAxis("Vertical") != 0))
