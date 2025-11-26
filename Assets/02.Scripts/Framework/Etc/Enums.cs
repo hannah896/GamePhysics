@@ -74,4 +74,10 @@ public static class Enums
         Left = -210,
         Right = 210,
     }
+
+    public enum DoorSide
+    {
+        Left,
+        Right,
+    }
 }
