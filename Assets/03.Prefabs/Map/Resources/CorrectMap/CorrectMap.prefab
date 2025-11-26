@@ -3670,7 +3670,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &309616195001664170
@@ -5836,7 +5836,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &443692964237305063
@@ -6952,7 +6952,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &489976526651729110
@@ -11018,7 +11018,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &826593547611729502
@@ -12488,7 +12488,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &976506473086983447
@@ -13767,7 +13767,7 @@ GameObject:
   - component: {fileID: 7501924095187613971}
   - component: {fileID: 1987740682818870336}
   - component: {fileID: 1195383406296430783}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Door_White_04_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13861,7 +13861,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -713141499430436673, guid: 5162096ba8b5be444aeb146314a102be, type: 3}
 --- !u!1 &1120210806667968486
@@ -16252,7 +16252,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &1295690225940200116
@@ -17865,7 +17865,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &1440564788589931982
@@ -24156,7 +24156,7 @@ GameObject:
   - component: {fileID: 7278010953427890011}
   - component: {fileID: 1030359977543246910}
   - component: {fileID: 2620460973736382200}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Door_White_04_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24250,7 +24250,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -713141499430436673, guid: 5162096ba8b5be444aeb146314a102be, type: 3}
 --- !u!1 &1971163142529066022
@@ -25000,7 +25000,7 @@ GameObject:
   - component: {fileID: 6456949764358509500}
   - component: {fileID: 5638396371599081827}
   - component: {fileID: 7210442789762195662}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: knock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27896,7 +27896,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2147483648
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -31337,6 +31337,8 @@ GameObject:
   - component: {fileID: 8763835224196217809}
   - component: {fileID: 8685379791115284758}
   - component: {fileID: 2771968861361696275}
+  - component: {fileID: 5761268243852157628}
+  - component: {fileID: 472898429681586954}
   m_Layer: 0
   m_Name: TSP_House_Stairs_02A_1 (3)
   m_TagString: Untagged
@@ -31431,9 +31433,49 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 67eeaaf343333b3468e8441ca1e23181, type: 3}
+--- !u!54 &5761268243852157628
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2479628343881867860}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &472898429681586954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2479628343881867860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf790dc00949724eb4f138b67e6d479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Check: {fileID: 2771968861361696275}
 --- !u!1 &2481664258705515819
 GameObject:
   m_ObjectHideFlags: 0
@@ -31950,7 +31992,7 @@ GameObject:
   - component: {fileID: 1781771749859410661}
   - component: {fileID: 4558167025218641300}
   - component: {fileID: 1514252249284081994}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Door_White_04_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32044,7 +32086,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -713141499430436673, guid: 5162096ba8b5be444aeb146314a102be, type: 3}
 --- !u!1 &2533256534057152946
@@ -35121,7 +35163,7 @@ Transform:
   m_GameObject: {fileID: 2884941445917064774}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 11.363237, y: 0.12, z: 21.477566}
+  m_LocalPosition: {x: 11.35016, y: -0.004999619, z: 21.527563}
   m_LocalScale: {x: 1.5842148, y: 1, z: 2.9458764}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41204,7 +41246,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &3416688373239755325
@@ -43228,7 +43270,7 @@ GameObject:
   - component: {fileID: 5961123224469033586}
   - component: {fileID: 3164771079098433203}
   - component: {fileID: 6836817372608353729}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Door_White_04_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43322,7 +43364,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -713141499430436673, guid: 5162096ba8b5be444aeb146314a102be, type: 3}
 --- !u!1 &3604889957635947965
@@ -43884,7 +43926,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &3682637435481465797
@@ -48391,7 +48433,7 @@ GameObject:
   - component: {fileID: 5340614801516482072}
   - component: {fileID: 1001027348057737904}
   - component: {fileID: 7256122827844323908}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: door decoration (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54929,7 +54971,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &4787875548273703305
@@ -56488,6 +56530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6550344584630319075}
+  - component: {fileID: 6177142832581318114}
   m_Layer: 0
   m_Name: CorrectMap
   m_TagString: Untagged
@@ -56516,6 +56559,20 @@ Transform:
   - {fileID: 8700144008971425420}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6177142832581318114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951236939494440057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b9f11451e9b2a4ca77075feddaf96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  O: {fileID: 8836300960715125204}
+  X: {fileID: 472898429681586954}
 --- !u!1 &4983292773142605764
 GameObject:
   m_ObjectHideFlags: 0
@@ -56856,7 +56913,9 @@ GameObject:
   - component: {fileID: 6417738419295505379}
   - component: {fileID: 7436738467978808066}
   - component: {fileID: 8470942337855961901}
-  m_Layer: 0
+  - component: {fileID: 4456623585518760119}
+  - component: {fileID: 692691939446338041}
+  m_Layer: 31
   m_Name: Door_White_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56871,7 +56930,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5000406195178787126}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.14347172, y: -1.60019, z: 0.1719284}
   m_LocalScale: {x: 1.3658209, y: 1.41015, z: 1.5000002}
   m_ConstrainProportionsScale: 0
@@ -56951,9 +57010,50 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1018126508849329630, guid: 8a08319d3182ba440a9b647648539906, type: 3}
+--- !u!54 &4456623585518760119
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000406195178787126}
+  serializedVersion: 5
+  m_Mass: 0.1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
+--- !u!114 &692691939446338041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000406195178787126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5167f189ea994647a14766e31bfe794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: -210
+  rb: {fileID: 4456623585518760119}
 --- !u!1 &5003255570348700954
 GameObject:
   m_ObjectHideFlags: 0
@@ -59669,7 +59769,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &5217569376617395473
@@ -63346,7 +63446,9 @@ GameObject:
   - component: {fileID: 1409984229655260748}
   - component: {fileID: 5214817835358359210}
   - component: {fileID: 4452247095969588638}
-  m_Layer: 0
+  - component: {fileID: 7496774346053819826}
+  - component: {fileID: 4594702903572509066}
+  m_Layer: 31
   m_Name: Door_White_04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63441,9 +63543,50 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1018126508849329630, guid: 8a08319d3182ba440a9b647648539906, type: 3}
+--- !u!114 &7496774346053819826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5659970837331497408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5167f189ea994647a14766e31bfe794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: 210
+  rb: {fileID: 4594702903572509066}
+--- !u!54 &4594702903572509066
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5659970837331497408}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
 --- !u!1 &5662064031154213293
 GameObject:
   m_ObjectHideFlags: 0
@@ -63769,7 +63912,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7514991316261419789, guid: 94b667367daac714f80ecc709d864242, type: 3}
 --- !u!1 &5675794395971715528
@@ -64588,7 +64731,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &5737310350986085045
@@ -69181,7 +69324,7 @@ GameObject:
   - component: {fileID: 3295523814453540784}
   - component: {fileID: 4072423958129368458}
   - component: {fileID: 3066137189826790161}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: door decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69196,13 +69339,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6047668924777137209}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.027340468, z: -0, w: 0.9996262}
   m_LocalPosition: {x: 0.5008038, y: 1.2867879, z: 0.01897148}
   m_LocalScale: {x: 0.11250226, y: 0.14555898, z: 0.0038624352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2502088455894292533}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -3.133, z: 0}
 --- !u!33 &3295523814453540784
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -69787,7 +69930,9 @@ GameObject:
   - component: {fileID: 5496950625526413659}
   - component: {fileID: 3291943437780213357}
   - component: {fileID: 8748088829204810790}
-  m_Layer: 0
+  - component: {fileID: 5255583660676722908}
+  - component: {fileID: 6905437322896611769}
+  m_Layer: 31
   m_Name: ProfessorDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69802,8 +69947,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6113155813786609746}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -6.1230893, y: 0.00003671646, z: -1.21422}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -6.2525396, y: 0.00003671646, z: -1.214222}
   m_LocalScale: {x: 1.4408598, y: 1.4101499, z: 1.2945199}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -69888,9 +70033,50 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1018126508849329630, guid: 8a08319d3182ba440a9b647648539906, type: 3}
+--- !u!54 &5255583660676722908
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113155813786609746}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
+--- !u!114 &6905437322896611769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113155813786609746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5167f189ea994647a14766e31bfe794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: 210
+  rb: {fileID: 5255583660676722908}
 --- !u!1 &6133125088175242355
 GameObject:
   m_ObjectHideFlags: 0
@@ -70958,7 +71144,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &6159901757395784905
@@ -72302,7 +72488,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &6265423161758252593
@@ -72914,7 +73100,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &6291640877949617647
@@ -75254,7 +75440,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &6437964061700975696
@@ -78588,7 +78774,9 @@ GameObject:
   - component: {fileID: 3659034800627642098}
   - component: {fileID: 9186747136264988264}
   - component: {fileID: 6640035923888510070}
-  m_Layer: 0
+  - component: {fileID: 7160409503230816596}
+  - component: {fileID: 8012684129043201730}
+  m_Layer: 31
   m_Name: Door_White_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78603,9 +78791,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6696349437515140767}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.00552845, y: -1.60019, z: 2.8959274}
-  m_LocalScale: {x: 1.352164, y: 1.41015, z: 1.5000002}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.14347172, y: -1.60019, z: 2.8899164}
+  m_LocalScale: {x: 1.352164, y: 1.41015, z: -1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8067618414920785688}
@@ -78677,15 +78865,56 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2147483648
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1018126508849329630, guid: 8a08319d3182ba440a9b647648539906, type: 3}
+--- !u!54 &7160409503230816596
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696349437515140767}
+  serializedVersion: 5
+  m_Mass: 0.1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
+--- !u!114 &8012684129043201730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696349437515140767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5167f189ea994647a14766e31bfe794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: 210
+  rb: {fileID: 7160409503230816596}
 --- !u!1 &6700625123979309051
 GameObject:
   m_ObjectHideFlags: 0
@@ -81146,7 +81375,7 @@ GameObject:
   - component: {fileID: 2911868249213765882}
   - component: {fileID: 265675729899535669}
   - component: {fileID: 5933051814839769688}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: door decoration (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83982,6 +84211,8 @@ GameObject:
   - component: {fileID: 3171868078559453648}
   - component: {fileID: 896555356016756115}
   - component: {fileID: 1566890051511530549}
+  - component: {fileID: 3281483232026497952}
+  - component: {fileID: 8836300960715125204}
   m_Layer: 0
   m_Name: TSP_House_Stairs_02A_1 (3)
   m_TagString: Untagged
@@ -84076,9 +84307,49 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 67eeaaf343333b3468e8441ca1e23181, type: 3}
+--- !u!54 &3281483232026497952
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145204152155938360}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8836300960715125204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145204152155938360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf790dc00949724eb4f138b67e6d479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Check: {fileID: 1566890051511530549}
 --- !u!1 &7156720493178364570
 GameObject:
   m_ObjectHideFlags: 0
@@ -87596,7 +87867,7 @@ GameObject:
   - component: {fileID: 49296994681557794}
   - component: {fileID: 6468441720984377189}
   - component: {fileID: 3196240134409794013}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: door decoration (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88710,7 +88981,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &7696094204936150838
@@ -92374,7 +92645,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &7992441971288585205
@@ -95078,7 +95349,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &8167629353819033395
@@ -99699,7 +99970,7 @@ GameObject:
   - component: {fileID: 6461417414589916705}
   - component: {fileID: 6159404030871345338}
   - component: {fileID: 980551011930092751}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: nameplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104569,7 +104840,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &9016502197204154506
@@ -104680,7 +104951,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -408963529298199970, guid: 8ac3536643a37de4198eb1389def8e9e, type: 3}
 --- !u!1 &9020383139608664052

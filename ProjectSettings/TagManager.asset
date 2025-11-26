@@ -9,6 +9,7 @@ TagManager:
   - UIPermanent
   - UICanvas
   - UIPanel
+  - Professor
   layers:
   - Default
   - TransparentFX
