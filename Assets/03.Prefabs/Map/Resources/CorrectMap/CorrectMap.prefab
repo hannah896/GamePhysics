@@ -57069,6 +57069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivot: -210
+  side: 0
   rb: {fileID: 5349802326022085293}
 --- !u!1 &5003255570348700954
 GameObject:
@@ -63575,7 +63576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivot: 210
-  rb: {fileID: 0}
+  side: 0
+  rb: {fileID: 4776741387899896237}
 --- !u!54 &4776741387899896237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -70064,7 +70066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5167f189ea994647a14766e31bfe794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pivot: -210
+  pivot: 210
+  side: 1
   rb: {fileID: 6755309691074667063}
 --- !u!54 &6755309691074667063
 Rigidbody:
@@ -70089,7 +70092,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
@@ -78903,7 +78906,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivot: 210
-  rb: {fileID: 0}
+  side: 0
+  rb: {fileID: 3865221083063255733}
 --- !u!54 &3865221083063255733
 Rigidbody:
   m_ObjectHideFlags: 0
