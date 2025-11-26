@@ -31337,8 +31337,9 @@ GameObject:
   - component: {fileID: 8763835224196217809}
   - component: {fileID: 8685379791115284758}
   - component: {fileID: 2771968861361696275}
-  - component: {fileID: 5761268243852157628}
   - component: {fileID: 472898429681586954}
+  - component: {fileID: 3142481872108103767}
+  - component: {fileID: 7465218486449409861}
   m_Layer: 0
   m_Name: TSP_House_Stairs_02A_1 (3)
   m_TagString: Untagged
@@ -31436,7 +31437,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 67eeaaf343333b3468e8441ca1e23181, type: 3}
---- !u!54 &5761268243852157628
+--- !u!114 &472898429681586954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2479628343881867860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf790dc00949724eb4f138b67e6d479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Check: {fileID: 2771968861361696275}
+--- !u!54 &3142481872108103767
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31463,7 +31477,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &472898429681586954
+--- !u!114 &7465218486449409861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56913,8 +56927,8 @@ GameObject:
   - component: {fileID: 6417738419295505379}
   - component: {fileID: 7436738467978808066}
   - component: {fileID: 8470942337855961901}
-  - component: {fileID: 4456623585518760119}
-  - component: {fileID: 692691939446338041}
+  - component: {fileID: 5349802326022085293}
+  - component: {fileID: 7501756525976384460}
   m_Layer: 31
   m_Name: Door_White_04 (1)
   m_TagString: Untagged
@@ -57013,7 +57027,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1018126508849329630, guid: 8a08319d3182ba440a9b647648539906, type: 3}
---- !u!54 &4456623585518760119
+--- !u!54 &5349802326022085293
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57040,7 +57054,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &692691939446338041
+--- !u!114 &7501756525976384460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57053,7 +57067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivot: -210
-  rb: {fileID: 4456623585518760119}
+  rb: {fileID: 5349802326022085293}
 --- !u!1 &5003255570348700954
 GameObject:
   m_ObjectHideFlags: 0
@@ -63447,7 +63461,7 @@ GameObject:
   - component: {fileID: 5214817835358359210}
   - component: {fileID: 4452247095969588638}
   - component: {fileID: 7496774346053819826}
-  - component: {fileID: 4594702903572509066}
+  - component: {fileID: 4776741387899896237}
   m_Layer: 31
   m_Name: Door_White_04 (2)
   m_TagString: Untagged
@@ -63559,8 +63573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivot: 210
-  rb: {fileID: 4594702903572509066}
---- !u!54 &4594702903572509066
+  rb: {fileID: 0}
+--- !u!54 &4776741387899896237
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69930,8 +69944,8 @@ GameObject:
   - component: {fileID: 5496950625526413659}
   - component: {fileID: 3291943437780213357}
   - component: {fileID: 8748088829204810790}
-  - component: {fileID: 5255583660676722908}
   - component: {fileID: 6905437322896611769}
+  - component: {fileID: 6755309691074667063}
   m_Layer: 31
   m_Name: ProfessorDoor
   m_TagString: Untagged
@@ -70036,7 +70050,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1018126508849329630, guid: 8a08319d3182ba440a9b647648539906, type: 3}
---- !u!54 &5255583660676722908
+--- !u!114 &6905437322896611769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113155813786609746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5167f189ea994647a14766e31bfe794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: -210
+  rb: {fileID: 6755309691074667063}
+--- !u!54 &6755309691074667063
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70063,20 +70091,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &6905437322896611769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6113155813786609746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5167f189ea994647a14766e31bfe794, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pivot: 210
-  rb: {fileID: 5255583660676722908}
 --- !u!1 &6133125088175242355
 GameObject:
   m_ObjectHideFlags: 0
@@ -78774,8 +78788,8 @@ GameObject:
   - component: {fileID: 3659034800627642098}
   - component: {fileID: 9186747136264988264}
   - component: {fileID: 6640035923888510070}
-  - component: {fileID: 7160409503230816596}
   - component: {fileID: 8012684129043201730}
+  - component: {fileID: 3865221083063255733}
   m_Layer: 31
   m_Name: Door_White_04
   m_TagString: Untagged
@@ -78874,7 +78888,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1018126508849329630, guid: 8a08319d3182ba440a9b647648539906, type: 3}
---- !u!54 &7160409503230816596
+--- !u!114 &8012684129043201730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696349437515140767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5167f189ea994647a14766e31bfe794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: 210
+  rb: {fileID: 0}
+--- !u!54 &3865221083063255733
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78901,20 +78929,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &8012684129043201730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6696349437515140767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5167f189ea994647a14766e31bfe794, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pivot: 210
-  rb: {fileID: 7160409503230816596}
 --- !u!1 &6700625123979309051
 GameObject:
   m_ObjectHideFlags: 0
@@ -84211,8 +84225,9 @@ GameObject:
   - component: {fileID: 3171868078559453648}
   - component: {fileID: 896555356016756115}
   - component: {fileID: 1566890051511530549}
-  - component: {fileID: 3281483232026497952}
   - component: {fileID: 8836300960715125204}
+  - component: {fileID: 7331506118344338315}
+  - component: {fileID: 6695162776989298018}
   m_Layer: 0
   m_Name: TSP_House_Stairs_02A_1 (3)
   m_TagString: Untagged
@@ -84310,7 +84325,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 67eeaaf343333b3468e8441ca1e23181, type: 3}
---- !u!54 &3281483232026497952
+--- !u!114 &8836300960715125204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145204152155938360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf790dc00949724eb4f138b67e6d479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Check: {fileID: 1566890051511530549}
+--- !u!54 &7331506118344338315
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84337,7 +84365,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8836300960715125204
+--- !u!114 &6695162776989298018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

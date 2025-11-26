@@ -10,16 +10,20 @@ public class Door : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player")|| collision.gameObject.CompareTag("Professor"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Util.Log("내가 문열어줄게!!!!!!!");
-            if (collision.transform.position.x < transform.position.x)
+            // 플레이어가 복도에 있을때
+            if (collision.transform.position.x > transform.position.x)
             {
-                rb.DORotate((int)pivot * Vector3.down, 3.5f).SetEase(Ease.OutElastic);
+                rb.DORotate((int)pivot * Vector3.up, 5f).SetEase(Ease.OutElastic);
+                Util.Log("복도에 있네????");
             }
+            // 플레이어가 방에 있을때 
             else
             {
                 rb.DORotate((int)pivot * Vector3.up, 3.5f).SetEase(Ease.OutElastic);
+                Util.Log("방에 있네????");
             }   
         }
     }
