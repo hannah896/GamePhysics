@@ -75,7 +75,7 @@ public class PlayerStateBase : StateBase
         }
         else if (Controller.IsDance)
         {
-            StateMachine.ChangeState(animData.InteractState);
+            StateMachine.ChangeState(animData.DanceState);
             return;
         }
     }

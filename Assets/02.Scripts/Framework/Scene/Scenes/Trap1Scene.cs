@@ -3,6 +3,11 @@ using static Enums;
 
 public class Trap1Scene : SceneBase
 {
+    public Trap1Scene()
+    {
+        num = SceneNumber.Trap1;
+    }
+
     public override void OnEnter()
     {
         base.OnEnter();

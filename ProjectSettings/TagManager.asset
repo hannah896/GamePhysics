@@ -10,6 +10,7 @@ TagManager:
   - UICanvas
   - UIPanel
   - Professor
+  - Killer
   layers:
   - Default
   - TransparentFX

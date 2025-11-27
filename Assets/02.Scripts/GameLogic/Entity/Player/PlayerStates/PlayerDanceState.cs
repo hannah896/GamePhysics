@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.XR;
 
-public class PlayerInteractState : PlayerStateBase
+public class PlayerDanceState : PlayerStateBase
 {
     private float x;
     private float z;
-    public PlayerInteractState(StateMachine<PlayerStateBase> stateMachine, int animHashKey, PlayerController controller) : base(stateMachine, animHashKey, controller)
+    public PlayerDanceState(StateMachine<PlayerStateBase> stateMachine, int animHashKey, PlayerController controller) : base(stateMachine, animHashKey, controller)
     {
     }
 
@@ -25,11 +25,10 @@ public class PlayerInteractState : PlayerStateBase
 
         Vector3 move = Vector3.zero;
 
-        // 입력은 Update에서 받아왔다고 가정(h, v)
         move += x * transform.right;
         move += z * transform.forward;
 
-        rb.MovePosition(rb.position + move * 10.0f * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + move * 3.0f * Time.fixedDeltaTime);
     }
 
     public override void Update()

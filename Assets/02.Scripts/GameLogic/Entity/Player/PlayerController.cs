@@ -61,12 +61,11 @@ public class PlayerController : MonoBehaviour
     }
 
     public void AnimationTrigger() => AnimTrigger?.Invoke();
+
+
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag("Killer"))
             IsDead = true;
-        else if (col.gameObject.GetComponent<MusicZone>())
-            IsDance = true;
-
     }
 }
