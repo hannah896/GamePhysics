@@ -34,14 +34,9 @@ public class BlickLight : MonoBehaviour
         light.intensity = flick;
         if (noise > 0.9f)
         {
-            int x = Random.Range(1, 4);
+            int x = Random.Range((int)SFXName.LightNoise1, (int)SFXName.LightNoise3 + 1);
 
-            if (x == 1)
-                Managers.Audio.Controller.PlaySFX(SFXName.LightNoise1);
-            else if (x == 2)
-                Managers.Audio.Controller.PlaySFX(SFXName.LightNoise2);
-            else
-                Managers.Audio.Controller.PlaySFX(SFXName.LightNoise3);
+            Managers.Audio.Controller.PlaySFX((SFXName)x);
         }
         mat.SetColor("_EmissionColor", Color.white * flick);
     }

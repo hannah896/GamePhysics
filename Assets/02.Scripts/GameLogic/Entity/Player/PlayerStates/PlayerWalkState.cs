@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Enums;
 
 public class PlayerWalkState : PlayerStateBase
 {
@@ -14,10 +15,12 @@ public class PlayerWalkState : PlayerStateBase
     public override void OnEnter()
     {
         base.OnEnter();
+        Controller.AnimTrigger += PlaySound;
     }
 
     public override void OnExit()
     {
+        Controller.AnimTrigger -= PlaySound;
         base.OnExit();
     }
 
@@ -27,7 +30,6 @@ public class PlayerWalkState : PlayerStateBase
 
         Vector3 move = Vector3.zero;
 
-        // 입력은 Update에서 받아왔다고 가정(h, v)
         move += x * transform.right;
         move += z * transform.forward;
 
@@ -57,4 +59,8 @@ public class PlayerWalkState : PlayerStateBase
         z = Input.GetAxis("Vertical");
     }
 
+    private void PlaySound()
+    {
+        Managers.Audio.Controller.PlaySFX((SFXName)Random.Range((int)SFXName.Walk1, (int)SFXName.Walk3 + 1));
+    }
 }

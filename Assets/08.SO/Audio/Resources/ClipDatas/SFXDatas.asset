@@ -16,10 +16,20 @@ MonoBehaviour:
   - _name: 0
     _audioClip: {fileID: 8300000, guid: 8c0076af32c05472ea10c21828b3110d, type: 3}
   - _name: 1
-    _audioClip: {fileID: 8300000, guid: c497e5b45bc3c9145931c7ba7e5abc48, type: 3}
+    _audioClip: {fileID: 8300000, guid: d5c3778edd6f88244a5eff78db0951cb, type: 3}
   - _name: 2
-    _audioClip: {fileID: 8300000, guid: 8dc243c542c17489293abe6c23bf8af3, type: 3}
+    _audioClip: {fileID: 8300000, guid: ecef98b3978a2e74a9d321197c9fc98e, type: 3}
   - _name: 3
-    _audioClip: {fileID: 8300000, guid: 14fba1df39b9e4ca28123afc4f2d4870, type: 3}
+    _audioClip: {fileID: 8300000, guid: 67f1320dedbaf4640ab9efbbb720f612, type: 3}
   - _name: 4
+    _audioClip: {fileID: 8300000, guid: 8dc243c542c17489293abe6c23bf8af3, type: 3}
+  - _name: 5
+    _audioClip: {fileID: 8300000, guid: 14fba1df39b9e4ca28123afc4f2d4870, type: 3}
+  - _name: 6
     _audioClip: {fileID: 8300000, guid: 2c264d55a5aff4f1db7d0f011cc7ecbe, type: 3}
+  - _name: 7
+    _audioClip: {fileID: 8300000, guid: 1341e2b988f0e0f4a8a7f0e194d9d551, type: 3}
+  - _name: 8
+    _audioClip: {fileID: 8300000, guid: 2045330c19005fa49a1047588f3a222e, type: 3}
+  - _name: 9
+    _audioClip: {fileID: 8300000, guid: c9cb8cc7e7af5af4780de2147fba30c1, type: 3}

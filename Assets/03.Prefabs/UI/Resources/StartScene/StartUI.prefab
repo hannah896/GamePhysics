@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "N4 \uCD9C\uAD6C(\uAC00\uC81C)"
+  m_text: "N4: \uC624\uB958\uAD6C\uAC04"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3405dae1c663cc74488164db53bd2120, type: 2}
   m_sharedMaterial: {fileID: 654561138097175082, guid: 3405dae1c663cc74488164db53bd2120, type: 2}

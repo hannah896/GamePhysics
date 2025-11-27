@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -10,13 +11,17 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     public PlayerAnimationData AnimData { get; set; } = new();
-    
+
+    public Action AnimTrigger;
+
     #region Component
     public Animator Anim { get; private set; }
     public Rigidbody rb;
     public Collider col;
     #endregion
 
+    public bool IsDead { get; set; } = false;
+    public bool IsDance { get; set; } = false;
 
     private void OnValidate()
     {
@@ -39,6 +44,8 @@ public class PlayerController : MonoBehaviour
         AnimData.Init(this);
     }
 
+    
+
     private void Update()
     {
         if (AnimData != null)
@@ -51,5 +58,15 @@ public class PlayerController : MonoBehaviour
     {
         if (AnimData != null)
             AnimData.StateMachine.CurrentState?.FixedUpdate();
+    }
+
+    public void AnimationTrigger() => AnimTrigger?.Invoke();
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.CompareTag("Killer"))
+            IsDead = true;
+        else if (col.gameObject.GetComponent<MusicZone>())
+            IsDance = true;
+
     }
 }

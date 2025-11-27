@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Enums;
 
 public class PlayerRunState : PlayerStateBase
 {
@@ -14,10 +15,12 @@ public class PlayerRunState : PlayerStateBase
     public override void OnEnter()
     {
         base.OnEnter();
+        Controller.AnimTrigger += PlaySound;
     }
 
     public override void OnExit()
     {
+        Controller.AnimTrigger -= PlaySound;
         base.OnExit();
     }
     public override void FixedUpdate()
@@ -49,8 +52,12 @@ public class PlayerRunState : PlayerStateBase
             StateMachine.ChangeState(animData.WalkState);
             return;
         }
-
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
+    }
+
+    private void PlaySound()
+    {
+        Managers.Audio.Controller.PlaySFX((SFXName)Random.Range((int)SFXName.Run1, (int)SFXName.Run3 + 1));
     }
 }
