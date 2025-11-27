@@ -61,6 +61,9 @@ public static class Enums
     {
         Click,
         Walk,
+        LightNoise1,
+        LightNoise2,
+        LightNoise3,
         Count,
     }
 

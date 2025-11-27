@@ -17,3 +17,9 @@ MonoBehaviour:
     _audioClip: {fileID: 8300000, guid: 8c0076af32c05472ea10c21828b3110d, type: 3}
   - _name: 1
     _audioClip: {fileID: 8300000, guid: c497e5b45bc3c9145931c7ba7e5abc48, type: 3}
+  - _name: 2
+    _audioClip: {fileID: 8300000, guid: 8dc243c542c17489293abe6c23bf8af3, type: 3}
+  - _name: 3
+    _audioClip: {fileID: 8300000, guid: 14fba1df39b9e4ca28123afc4f2d4870, type: 3}
+  - _name: 4
+    _audioClip: {fileID: 8300000, guid: 2c264d55a5aff4f1db7d0f011cc7ecbe, type: 3}

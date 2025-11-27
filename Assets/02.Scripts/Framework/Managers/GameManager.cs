@@ -32,7 +32,7 @@ public class GameManager
     public void Init(Level level = Level.None)
     {
         this.level = level;
-        GoalCount = (int)level * 2;
+        GoalCount = (int)level * 3;
         CurrentCount = 0;
 
         Next = new StageInfo(new CorrectScene(), true);
@@ -66,12 +66,12 @@ public class GameManager
         {
             _isCorrect = false;
             int num = Random.Range(1, (int)Stage.Count);
-            //Managers.Scene.ChangeState();
+            //Managers.Scene.ChangeState(Managers.Scene.);
         }
         else
         {
             _isCorrect = true;
-            Next = new StageInfo(new CorrectScene(), _isCorrect);
+            Next = new StageInfo(Managers.Scene.CorrectScene, _isCorrect);
         }
     }
 }
