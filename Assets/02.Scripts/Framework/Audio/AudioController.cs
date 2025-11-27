@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using static Enums;
 
 public class AudioController
@@ -11,7 +12,7 @@ public class AudioController
     private AudioSource bgmAudioSource;
     private List<AudioSource> sfxAudioSources = new();
 
-    public void InitBGM(SceneBGM so, BGMName startBGM)
+    public void InitBGM(BGMData so, BGMName startBGM)
     {
         // 딕셔너리에 싹다 등록
         foreach (var bgm in so.audioClips)
@@ -23,7 +24,7 @@ public class AudioController
     }
 
 
-    public void InitSFX(SceneSFX so)
+    public void InitSFX(SFXData so)
     {
         // 딕셔너리에 싹다 등록
         foreach (var sfx in so.audioClips)
@@ -48,19 +49,12 @@ public class AudioController
         {
             var audio = go.GetComponent<AudioObj>();
             bgmAudioSource = audio.audioSource;
-            
-            audio.audioSource.outputAudioMixerGroup  = Managers.Audio.Mixer.FindMatchingGroups("BGM")[0];
-            Managers.Audio.SettingData();
-            // 3. Mixer 파라미터 실제로 적용됐는지 확인 (선택)
-            float v;
-            Managers.Audio.Mixer.GetFloat("BGM", out v);
-            Debug.Log("적용된 BGMVolume(dB): " + v);
 
             audio.Init(bgm);
+            bgmAudioSource.outputAudioMixerGroup = Managers.Audio.Mixer.FindMatchingGroups("BGM")[0];
             audio.audioSource.loop = true;
             
             bgmAudioSource.Play();
-            //
         });
     }
 
@@ -85,15 +79,5 @@ public class AudioController
             sfxAudioSources.Add(audio.audioSource);
             audio.SFXPlay();
         });
-    }
-
-    /// <summary>
-    /// 새로운 씬 로드 시 오디오 데이터 클리어 할라고 만든 메서드 
-    /// </summary>
-    public void Clear()
-    {
-        bgmAudioSource.Stop();
-        bgmData.Clear();
-        sfxData.Clear();
     }
 }

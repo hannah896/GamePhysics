@@ -14,6 +14,11 @@ public class AudioObj : Poolable
     }
 #endif
 
+    private void Start()
+    {
+        Managers.Audio.SettingData();
+    }
+
     public void Init(AudioClip clip)
     {
         audioSource.clip = clip;

@@ -60,11 +60,15 @@ public static class Enums
     public enum SFXName
     {
         Click,
+        Walk,
         Count,
     }
 
     public enum BGMName
     {
+        Start,
+        Game,
+        Horror,
         Dance,
         Count,
     }
@@ -73,5 +77,11 @@ public static class Enums
     {
         Left = -210,
         Right = 210,
+    }
+
+    public enum DoorSide
+    {
+        Left,
+        Right,
     }
 }
