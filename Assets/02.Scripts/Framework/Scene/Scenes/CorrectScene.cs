@@ -19,18 +19,7 @@ public class CorrectScene : SceneBase
         //    Managers.UI.ShowUI<UIStart>();
         //});
 
-
-        // Audio 믹서 로드
-        await Managers.Resource.LoadAsync<AudioMixer>("Sound", async mixer =>
-        {
-            await Managers.Resource.LoadAsync<VolumeData>("VolumeDate", volumeData =>
-            {
-                Managers.Audio.Init(mixer, volumeData);
-            });
-        });
-
-
-        // BGM, SFX 로드
+        // BGM 재생.
         Managers.Audio.Controller.PlayBGM(BGMName.Game);
     }
 
