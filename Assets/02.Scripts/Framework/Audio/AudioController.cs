@@ -54,6 +54,7 @@ public class AudioController
             bgmAudioSource.outputAudioMixerGroup = Managers.Audio.Mixer.FindMatchingGroups("BGM")[0];
             audio.audioSource.loop = true;
             
+            Util.Log("BGM을 틀어보께~");
             bgmAudioSource.Play();
         });
     }
