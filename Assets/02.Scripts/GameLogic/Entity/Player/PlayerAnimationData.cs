@@ -8,7 +8,7 @@ public class PlayerAnimationData
     private string DeadParameterName = "Dead";
     private string walkParameterName = "Walk";
     private string RunParameterName = "Run";
-    private string InteractParameterName = "Interact";
+    private string DanceParameterName = "Dance";
     #endregion
 
     #region HashProperty
@@ -16,14 +16,14 @@ public class PlayerAnimationData
     protected int DeadHash { get; set; }
     protected int WalkHash { get; set; }
     protected int RunHash { get; set; }
-    protected int InteractHash { get; set; }
+    protected int DanceHash { get; set; }
     #endregion
 
     #region State
     public PlayerIdleState IdleState { get; private set; }
     public PlayerWalkState WalkState { get; private set; }
     public PlayerRunState RunState { get; private set; }
-    public PlayerInteractState InteractState { get; private set; }
+    public PlayerDanceState DanceState { get; private set; }
     public PlayerDeadState DeadState { get; private set; }
     #endregion
 
@@ -36,13 +36,13 @@ public class PlayerAnimationData
         IdleHash = Animator.StringToHash(idleParameterName);
         WalkHash = Animator.StringToHash(walkParameterName);
         RunHash = Animator.StringToHash(RunParameterName);
-        InteractHash = Animator.StringToHash(InteractParameterName);
+        DanceHash = Animator.StringToHash(DanceParameterName);
         DeadHash = Animator.StringToHash(DeadParameterName);
 
         IdleState = new PlayerIdleState(StateMachine, IdleHash, controller);
         WalkState = new PlayerWalkState(StateMachine, WalkHash, controller);
         RunState = new PlayerRunState(StateMachine, RunHash, controller);
-        InteractState = new PlayerInteractState(StateMachine, InteractHash, controller);
+        DanceState = new PlayerDanceState(StateMachine, DanceHash, controller);
         DeadState = new PlayerDeadState(StateMachine, DeadHash, controller);
 
         StateMachine.Init(IdleState);
