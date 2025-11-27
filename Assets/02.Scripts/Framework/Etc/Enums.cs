@@ -60,11 +60,15 @@ public static class Enums
     public enum SFXName
     {
         Click,
+        Walk,
         Count,
     }
 
     public enum BGMName
     {
+        Start,
+        Game,
+        Horror,
         Dance,
         Count,
     }

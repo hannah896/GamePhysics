@@ -8,8 +8,8 @@ public class BGMInfo
     public AudioClip _audioClip;
 }
 
-[CreateAssetMenu(fileName = "SceneBGM", menuName = "Scriptable Objects/SceneBGM")]
-public class SceneBGM : ScriptableObject
+[CreateAssetMenu(fileName = "BGMData", menuName = "Scriptable Objects/BGMData")]
+public class BGMData : ScriptableObject
 {
     public BGMInfo[] audioClips;
 }

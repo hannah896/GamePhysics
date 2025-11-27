@@ -36,18 +36,18 @@ public class StartScene : SceneBase
         // Audio 믹서 로드
         await Managers.Resource.LoadAsync<AudioMixer>("Sound", async mixer =>
         {
-            await Managers.Resource.LoadAsync<VolumeDate>("VolumeDate", volumeData =>
+            await Managers.Resource.LoadAsync<VolumeData>("VolumeDate", volumeData =>
             {
                 Managers.Audio.Init(mixer, volumeData);
             });
         });
 
         // BGM, SFX 로드
-        await Managers.Resource.LoadAsync<SceneBGM>("Start/StartBGM", so =>
+        await Managers.Resource.LoadAsync<BGMData>("ClipDatas/BGMDatas", so =>
         {
-            Managers.Audio.Controller.InitBGM(so, BGMName.Dance);
+            Managers.Audio.Controller.InitBGM(so, BGMName.Start);
         });
-        await Managers.Resource.LoadAsync<SceneSFX>("Start/StartSFX", so =>
+        await Managers.Resource.LoadAsync<SFXData>("ClipDatas/SFXDatas", so =>
         {
             Managers.Audio.Controller.InitSFX(so);
         });
@@ -56,7 +56,6 @@ public class StartScene : SceneBase
     public override void OnExit()
     {
         base.OnExit();
-        Managers.Audio.Controller.Clear();
     }
 
     public override void FixedUpdate()

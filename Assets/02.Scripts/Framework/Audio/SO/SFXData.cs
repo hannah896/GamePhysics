@@ -9,8 +9,8 @@ public class SFXInfo
     public AudioClip _audioClip;
 }
 
-[CreateAssetMenu(fileName = "SceneSFX", menuName = "Scriptable Objects/SceneSFX")]
-public class SceneSFX : ScriptableObject
+[CreateAssetMenu(fileName = "SFXData", menuName = "Scriptable Objects/SFXData")]
+public class SFXData : ScriptableObject
 {
     public List<SFXInfo> audioClips;
 }

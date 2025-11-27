@@ -6,17 +6,17 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class AudioManager
 {
-    private VolumeDate data;
+    private VolumeData data;
 
     public AudioController Controller = new();
     public AudioMixer Mixer;
     
-    public VolumeDate Data { get => data; }
+    public VolumeData Data { get => data; }
 
     /// <summary>
     /// 오디오 매니저 초기화 메서드
     /// </summary>
-    public void Init(AudioMixer mixer, VolumeDate data)
+    public void Init(AudioMixer mixer, VolumeData data)
     {
         Mixer = mixer;
         this.data = data;
@@ -40,7 +40,7 @@ public class AudioManager
                 Mixer.SetFloat("Master", dB);
                 
                 Mixer.GetFloat("Master", out float val);
-                Util.Log(val.ToString());
+                Util.Log("Master: " +val.ToString());
                 
                 data.ALL = value;
                 break;
@@ -48,7 +48,7 @@ public class AudioManager
                 Mixer.SetFloat("BGM", dB);
 
                 Mixer.GetFloat("BGM", out float v);
-                Util.Log(v.ToString());
+                Util.Log("BGM: " + v.ToString());
                 
                 data.BGM = value;
                 break;
@@ -56,7 +56,7 @@ public class AudioManager
                 Mixer.SetFloat("SFX", dB);
 
                 Mixer.GetFloat("SFX", out float va);
-                Util.Log(va.ToString());
+                Util.Log("SFX: " + va.ToString());
 
                 data.SFX = value;
                 break;

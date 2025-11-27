@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 656ac68f81af1fc4398eee8a450d7c0a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cacf3183bebbda44a4ada25747c0c09, type: 3}
   m_Name: VolumeDate
   m_EditorClassIdentifier: 
-  ALL: 0.5
-  BGM: 0.5
-  SFX: 0.5
+  ALL: 1
+  BGM: 1
+  SFX: 1
