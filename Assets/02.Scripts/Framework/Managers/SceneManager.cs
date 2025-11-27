@@ -15,7 +15,7 @@ public class SceneManager : StateMachine<SceneBase>
     /// </summary>
     public void Init()
     {
-        CurrentState = new StartScene();
+        CurrentState = StartScene;
         CurrentState.OnEnter();
     }
 
