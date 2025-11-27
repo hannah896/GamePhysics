@@ -5,7 +5,6 @@ public class PlayerIdleState : PlayerStateBase
 
     public PlayerIdleState(StateMachine<PlayerStateBase> stateMachine, int animHashKey, PlayerController controller) : base(stateMachine, animHashKey, controller)
     {
-        controller.Speed = speed;
     }
 
 

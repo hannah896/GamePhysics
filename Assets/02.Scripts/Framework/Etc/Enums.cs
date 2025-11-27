@@ -60,10 +60,15 @@ public static class Enums
     public enum SFXName
     {
         Click,
-        Walk,
+        Walk1,
+        Walk2,
+        Walk3,
         LightNoise1,
         LightNoise2,
         LightNoise3,
+        Run1,
+        Run2,
+        Run3,
         Count,
     }
 

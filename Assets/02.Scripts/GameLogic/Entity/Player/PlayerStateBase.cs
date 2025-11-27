@@ -1,7 +1,4 @@
-using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
-using UnityEngine.InputSystem.XR;
 
 public class PlayerStateBase : StateBase
 {
@@ -17,10 +14,10 @@ public class PlayerStateBase : StateBase
     protected PlayerController Controller { get; set; }
 
     protected int animHashKey;
-    protected float speed = 0.0f;
     private float sensitivity = 0.2f;
 
     private float RotSum = 0f;
+
     public PlayerStateBase(StateMachine<PlayerStateBase> stateMachine, int animHashKey, PlayerController controller)
     {
         StateMachine = stateMachine;
@@ -32,7 +29,6 @@ public class PlayerStateBase : StateBase
         Anim = controller.Anim;
         animData = controller.AnimData;
         StateMachine = stateMachine;
-        speed = controller.Speed;
         sensitivity = controller.Sensitivity;
     }
 
