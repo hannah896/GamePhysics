@@ -301,13 +301,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 009c56b24bfe05a40870887fa1e1ca37, type: 3}
---- !u!43 &1137469202
+--- !u!43 &1363539040
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterVolume--7148036
+  m_Name: WaterVolume--7564282
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -608,7 +608,7 @@ PrefabInstance:
     - target: {fileID: 1695070474884430308, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1137469202}
+      objectReference: {fileID: 1363539040}
     - target: {fileID: 2947948713766545666, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -653,8 +653,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap10
       objectReference: {fileID: 0}
+    - target: {fileID: 4564005735383170617, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.99562
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564005735383170617, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9499869
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564005735383170617, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -28.361792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564005735383170617, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564005735383170617, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564005735383170617, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564005735383170617, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3031862009374479749, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24df601021007d44fa50ac09b7b767a7, type: 3}
