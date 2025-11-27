@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStateBase : StateBase
@@ -49,6 +50,12 @@ public class PlayerStateBase : StateBase
             rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, RotSum, 0f));
             RotSum = 0; // 초기화
         }
+
+        if (Controller.IsDead)
+        {
+            StateMachine.ChangeState(animData.DeadState);
+            return;
+        }
     }
 
     public override void Update()
@@ -59,6 +66,17 @@ public class PlayerStateBase : StateBase
 
         // 누적만 Update에서 하고
         RotSum += rotX;
-    }
 
+        // 죽었으면 사망 상태
+        if (Controller.IsDead)
+        {
+            StateMachine.ChangeState(animData.DeadState);
+            return;
+        }
+        else if (Controller.IsDance)
+        {
+            StateMachine.ChangeState(animData.InteractState);
+            return;
+        }
+    }
 }

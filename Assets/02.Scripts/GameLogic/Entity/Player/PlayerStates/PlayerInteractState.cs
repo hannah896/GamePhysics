@@ -3,6 +3,8 @@ using UnityEngine.XR;
 
 public class PlayerInteractState : PlayerStateBase
 {
+    private float x;
+    private float z;
     public PlayerInteractState(StateMachine<PlayerStateBase> stateMachine, int animHashKey, PlayerController controller) : base(stateMachine, animHashKey, controller)
     {
     }
@@ -19,23 +21,22 @@ public class PlayerInteractState : PlayerStateBase
 
     public override void FixedUpdate()
     {
+        base.FixedUpdate();
 
+        Vector3 move = Vector3.zero;
+
+        // 입력은 Update에서 받아왔다고 가정(h, v)
+        move += x * transform.right;
+        move += z * transform.forward;
+
+        rb.MovePosition(rb.position + move * 10.0f * Time.fixedDeltaTime);
     }
 
     public override void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //TODO: 상호작용해서 이상현상 해결하도록 구현
-        if (Input.GetMouseButtonDown(1))
-        {
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, 5.0f))
-            {
-                if (hitInfo.collider.CompareTag("Interactable"))
-                {
-                    Debug.Log("Interacted with " + hitInfo.collider.name);
-                    StateMachine.ChangeState(animData.IdleState);
-                }
-            }
-        }
+        base.Update();
+
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
     }
 }

@@ -12,6 +12,24 @@ public static class Enums
     {
         Start,
         Correct,
+        Trap1,
+        Trap2,
+        Trap3,
+        Trap4,
+        Trap5,
+        Trap6,
+        Trap7,
+        Trap8,
+        Trap9,
+        Trap10,
+        Trap11,
+        Trap12,
+        Trap13,
+        Trap14,
+        Trap15,
+        Trap16,
+        Trap17,
+        Trap18,
         Count,
     }
     public enum Level
@@ -69,6 +87,7 @@ public static class Enums
         Run1,
         Run2,
         Run3,
+
         Count,
     }
 

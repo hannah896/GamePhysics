@@ -30,13 +30,10 @@ public class PlayerWalkState : PlayerStateBase
 
         Vector3 move = Vector3.zero;
 
-        // 입력은 Update에서 받아왔다고 가정(h, v)
         move += x * transform.right;
         move += z * transform.forward;
 
         rb.MovePosition(rb.position + move * speed * Time.fixedDeltaTime);
-
-
     }
 
 

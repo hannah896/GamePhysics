@@ -65,8 +65,19 @@ public class GameManager
         if (Random.Range(0, 100) > 30)
         {
             _isCorrect = false;
-            int num = Random.Range(1, (int)Stage.Count);
-            //Managers.Scene.ChangeState(Managers.Scene.);
+            int num = Random.Range((int)SceneNumber.Trap1, (int)SceneNumber.Count);
+            switch ((SceneNumber)num)
+            {
+                case SceneNumber.Trap1:
+                    Next = new StageInfo(Managers.Scene.Trap1Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap2:
+                    Next = new StageInfo(Managers.Scene.Trap2Scene, _isCorrect);
+                    break;
+
+            }
+            Managers.Scene.ChangeState(Managers.Scene.);
         }
         else
         {

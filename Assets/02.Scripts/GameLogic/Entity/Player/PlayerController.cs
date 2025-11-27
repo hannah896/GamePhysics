@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public Collider col;
     #endregion
 
+    public bool IsDead { get; set; } = false;
+    public bool IsDance { get; set; } = false;
 
     private void OnValidate()
     {
@@ -59,4 +61,12 @@ public class PlayerController : MonoBehaviour
     }
 
     public void AnimationTrigger() => AnimTrigger?.Invoke();
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.CompareTag("Killer"))
+            IsDead = true;
+        else if (col.gameObject.GetComponent<MusicZone>())
+            IsDance = true;
+
+    }
 }
