@@ -45,12 +45,12 @@ public class Door : MonoBehaviour
                 if (collision.transform.position.x < transform.position.x)
                 {
                     // 복도쪽 → pivot 각도 그대로
-                    transform.DOLocalRotate(15 * Vector3.up, 5.0f).SetEase(Ease.OutElastic);
+                    transform.DOLocalRotate((int)pivot/2 * Vector3.up, 5f).SetEase(Ease.OutElastic);
                 }
                 else
                 {
                     // 방 쪽 → pivot 각도 반대 방향
-                    transform.DOLocalRotate(15 * Vector3.down, 0.5f).SetEase(Ease.OutElastic);
+                    transform.DOLocalRotate((int)pivot/2* Vector3.down, 5f).SetEase(Ease.OutElastic);
                 }
             }
         }
