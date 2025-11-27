@@ -1,16 +1,39 @@
 using UnityEngine;
+using static Enums;
 
-public class Trap11Scene : MonoBehaviour
+public class Trap11Scene : SceneBase
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Trap11Scene()
     {
-        
+        num = SceneNumber.Trap11;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public override void OnEnter()
     {
-        
+        base.OnEnter();
+        // esc UI 로드
+        //_ = Managers.Resource.LoadAsync<GameObject>("GameScene/GameScene", go =>
+        //{
+        //    Managers.UI.path.Add(typeof(UIStart), "StartScene/StartUI");
+        //    Managers.UI.ShowUI<UIStart>();
+        //});
+
+        // BGM 재생.
+        Managers.Audio.Controller.PlayBGM(BGMName.Game);
+    }
+
+    public override void OnExit()
+    {
+        base.OnExit();
+    }
+    public override void FixedUpdate()
+    {
+
+    }
+
+    public override void Update()
+    {
+
     }
 }
