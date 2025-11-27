@@ -9,6 +9,7 @@ public class GameManager
     public int GoalCount { get; private set; }
 
     public int CurrentCount { get; set; }
+
     #endregion
 
     #region Stage Info
@@ -76,8 +77,70 @@ public class GameManager
                     Next = new StageInfo(Managers.Scene.Trap2Scene, _isCorrect);
                     break;
 
+                case SceneNumber.Trap3:
+                    Next = new StageInfo(Managers.Scene.Trap3Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap4:
+                    Next = new StageInfo(Managers.Scene.Trap4Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap5:
+                    Next = new StageInfo(Managers.Scene.Trap5Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap6:
+                    Next = new StageInfo(Managers.Scene.Trap6Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap7:
+                    Next = new StageInfo(Managers.Scene.Trap7Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap8:
+                    Next = new StageInfo(Managers.Scene.Trap8Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap9:
+                    Next = new StageInfo(Managers.Scene.Trap9Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap10:
+                    Next = new StageInfo(Managers.Scene.Trap10Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap11:
+                    Next = new StageInfo(Managers.Scene.Trap11Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap12:
+                    Next = new StageInfo(Managers.Scene.Trap12Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap13:
+                    Next = new StageInfo(Managers.Scene.Trap13Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap14:
+                    Next = new StageInfo(Managers.Scene.Trap14Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap15:
+                    Next = new StageInfo(Managers.Scene.Trap15Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap16:
+                    Next = new StageInfo(Managers.Scene.Trap16Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap17:
+                    Next = new StageInfo(Managers.Scene.Trap17Scene, _isCorrect);
+                    break;
+
+                case SceneNumber.Trap18:
+                    Next = new StageInfo(Managers.Scene.Trap18Scene, _isCorrect);
+                    break;
             }
-            Managers.Scene.ChangeState(Managers.Scene.);
         }
         else
         {

@@ -14,6 +14,60 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/Game/CorrectScene.unity
     guid: 72d11934e4a5f9349828e49c62214a2a
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 1.unity
+    guid: 2e6887819ebc7b44ebf2ab4b0eacaaaf
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 2.unity
+    guid: a1e0a08f2f404e542896b0c156ff307c
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 3.unity
+    guid: e5f8d57dbc52787419165d8748cf263b
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 4.unity
+    guid: 4bf738f93c7bb4d448891b1991dad069
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 5.unity
+    guid: f3c1dd55aeee91b48aefdde90574f1fa
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 6.unity
+    guid: 8b40ae900f928ed4bbfb60a377fd1cd5
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 7.unity
+    guid: 726b0fc710287be4e861f58ee2491da2
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 8.unity
+    guid: 73ab7bfd550ab924fa6c7219f41a99bf
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 9.unity
+    guid: 76b2d1ea67764804d93cface154fafd3
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 10.unity
+    guid: e26699f062032a645ba87994c180c44e
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 11.unity
+    guid: 16763d8832b468946b2293ab4fe81520
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 12.unity
+    guid: 53e9c8f6c3a560e46b0915b66e3f4243
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 13.unity
+    guid: 3d1f264abb951b641a1a073111f97b40
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 14.unity
+    guid: 2b0d6b75b6c071e4e9e5f45be8ef5b1a
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 15.unity
+    guid: 94c6b89314696c2499f00cfc167c0cb9
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 16.unity
+    guid: 1d3ae842732805f4c87bf427010898f7
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 17.unity
+    guid: f3986531b967ebb4ebabdb444c22662e
+  - enabled: 1
+    path: Assets/01.Scenes/Game/TrapScene 18.unity
+    guid: 2169469cb2874284d87fcd3670782287
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
