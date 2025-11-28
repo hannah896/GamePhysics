@@ -65,6 +65,11 @@ public class GameManager
             CurrentCount = 0;
             Next = new StageInfo(new CorrectScene(), true);
         }
+        if (CurrentCount >= GoalCount)
+        {
+            Managers.Scene.ChangeState(Managers.Scene.EndingScene);
+            return;
+        }
 
         Managers.Scene.ChangeState(Next.scene);
         Current = Next;

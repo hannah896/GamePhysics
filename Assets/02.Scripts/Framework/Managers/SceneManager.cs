@@ -26,6 +26,8 @@ public class SceneManager : StateMachine<SceneBase>
     public Trap16Scene Trap16Scene { get; private set; } = new Trap16Scene();
     public Trap17Scene Trap17Scene { get; private set; } = new Trap17Scene();
     public Trap18Scene Trap18Scene { get; private set; } = new Trap18Scene();
+    public EndingScene EndingScene { get; private set; } = new EndingScene();
+    public EndingCreditScene EndingCreditScene { get; private set; } = new EndingCreditScene();
     #endregion
 
     /// <summary>
