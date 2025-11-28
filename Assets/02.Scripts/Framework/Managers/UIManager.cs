@@ -77,10 +77,10 @@ public class UIManager
                 Managers.Resource.Destroy(go);
             }
             else
-                UIPopupDIct.Remove(ui);
+                UIPermanentDIct.Remove(ui);
         }
     }
-     
+
     /// <summary>
     /// 동적 UI 등록 해제 삭제
     /// </summary>

@@ -14,15 +14,6 @@ public abstract class UI_Button : UIPermanent
         Init();
     }
 
-    //public override void Init()
-    //{
-    //    base.Init();
-        
-    //    button.onClick.AddListener(OnClickButton);
-    //    button.onClick.AddListener(() => OnClickButton(targetValue));
-    //}
-
-
     public override void Init()
     {
         base.Init();

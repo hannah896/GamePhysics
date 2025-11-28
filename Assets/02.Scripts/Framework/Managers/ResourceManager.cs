@@ -22,6 +22,7 @@ public class ResourceManager
         if (operations.TryGetValue(path, out var operation))
         {
             var result = operation as T;
+            onComplete?.Invoke(result);
             return result;
         }
 
