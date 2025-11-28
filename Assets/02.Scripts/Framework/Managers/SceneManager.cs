@@ -40,11 +40,18 @@ public class SceneManager : StateMachine<SceneBase>
     /// <summary>
     /// 씬 전환 메서드
     /// </summary>
-    public override void ChangeState(SceneBase Nextstate)
+    public async override void ChangeState(SceneBase Nextstate)
     {
-        CurrentState.OnExit();
+        Util.Log($"State Change : {CurrentState?.GetType().Name} -> {Nextstate?.GetType().Name}");
+        CurrentState?.OnExit();
+        Update -= CurrentState.Update;
+        FixedUpdate -= CurrentState.FixedUpdate;
 
-        base.ChangeState(Nextstate);
-        UnityEngine.SceneManagement.SceneManager.LoadScene((int)Nextstate.num);
+        await UnityEngine.SceneManagement.SceneManager.LoadSceneAsync((int)Nextstate.num);
+
+        CurrentState = Nextstate;
+        CurrentState?.OnEnter();
+        Update += CurrentState.Update;
+        FixedUpdate += CurrentState.FixedUpdate;
     }
 }

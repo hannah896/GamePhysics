@@ -233,13 +233,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77080448}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6830127, y: -0.18301266, z: -0.18301266, w: 0.6830127}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &429524748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ PrefabInstance:
     - target: {fileID: 5374851769595227588, guid: 8aac95a11c60e5d4cabcc2ada61046b8, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1506588198}
+      objectReference: {fileID: 1814236616}
     - target: {fileID: 7757816935981004472, guid: 8aac95a11c60e5d4cabcc2ada61046b8, type: 3}
       propertyPath: m_Name
       value: Trap2
@@ -375,13 +375,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3078132768323018949, guid: 709d0939d77268741b7024fce53dd4e4, type: 3}
   m_PrefabInstance: {fileID: 995024497}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &1506588198
+--- !u!43 &1814236616
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterVolume--6764340
+  m_Name: WaterVolume--261064
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

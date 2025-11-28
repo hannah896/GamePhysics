@@ -45,6 +45,7 @@ public class AudioController
             return;
         }
 
+        Util.Log("BGM을 틀어보께~");
         Managers.Resource.Instantiate("BGMObj", go =>
         {
             var audio = go.GetComponent<AudioObj>();
@@ -54,6 +55,7 @@ public class AudioController
             bgmAudioSource.outputAudioMixerGroup = Managers.Audio.Mixer.FindMatchingGroups("BGM")[0];
             audio.audioSource.loop = true;
             
+            Util.Log("BGM 재생되나요");
             bgmAudioSource.Play();
         });
     }
