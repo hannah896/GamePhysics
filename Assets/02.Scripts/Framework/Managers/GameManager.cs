@@ -6,7 +6,7 @@ using static Enums;
 public class GameManager
 {
     #region GameInfo
-    public Level level { get; set; }
+    public Level Level { get; set; }
 
     public int GoalCount { get; private set; }
 
@@ -41,7 +41,7 @@ public class GameManager
     /// <param name="level"></param>
     public void Init(Level level = Level.None)
     {
-        this.level = level;
+        this.Level = level;
         GoalCount = (int)level * 5;
         CurrentCount = 0;
 

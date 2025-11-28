@@ -1,16 +1,32 @@
 using UnityEngine;
+using static Enums;
 
 public class MaterialChanger : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Renderer Renderer;
+    public ChangeType ChangeType;
+
+    public Material[] Materials;
+
+    private void OnValidate()
     {
-        
+        if (Renderer == null)
+            Renderer = GetComponent<Renderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        if (ChangeType == ChangeType.Guide)
+        {
+            if (Managers.Game.Level == Level.None)
+                return;
+            Renderer.material = Materials[(int)Managers.Game.Level - 1];
+        }
+        else if (ChangeType == ChangeType.Floor)
+        {
+            if (Managers.Game.GoalCount ==  0)
+                return;
+            Renderer.material = Materials[(int)Managers.Game.GoalCount- (int)Managers.Game.CurrentCount];
+        }
     }
 }

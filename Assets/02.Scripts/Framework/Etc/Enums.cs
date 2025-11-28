@@ -2,6 +2,13 @@ using UnityEngine;
 
 public static class Enums
 {
+    public enum ChangeType
+    {
+        Guide,
+        Floor,
+        Count,
+    }
+
     public enum Stage
     {
         Correct,
