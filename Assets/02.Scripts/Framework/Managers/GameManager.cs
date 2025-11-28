@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 using static Enums;
 
@@ -13,7 +15,7 @@ public class GameManager
     #endregion
 
     #region Stage Info
-    public class StageInfo
+    public struct StageInfo
     {
         public SceneBase scene;
         public bool IsCorrect;
@@ -30,11 +32,22 @@ public class GameManager
 
     #endregion
 
+    private List<StageInfo> traps = new();
+
+
+    /// <summary>
+    /// 시작화면에서 실행시켜주는 메서드 최초 1회만 실행됨.
+    /// </summary>
+    /// <param name="level"></param>
     public void Init(Level level = Level.None)
     {
         this.level = level;
-        GoalCount = (int)level * 3;
+        GoalCount = (int)level * 5;
         CurrentCount = 0;
+
+        traps.Clear();
+
+        ResetTraps();
 
         Next = new StageInfo(new CorrectScene(), true);
         Current = Next;
@@ -65,87 +78,38 @@ public class GameManager
         //70%확률로 트랩맵 당첨
         if (Random.Range(0, 100) > 30)
         {
-            _isCorrect = false;
-            int num = Random.Range((int)SceneNumber.Trap1, (int)SceneNumber.Count);
-            switch ((SceneNumber)num)
-            {
-                case SceneNumber.Trap1:
-                    Next = new StageInfo(Managers.Scene.Trap1Scene, _isCorrect);
-                    break;
+            if (traps.Count == 0)
+                ResetTraps();
 
-                case SceneNumber.Trap2:
-                    Next = new StageInfo(Managers.Scene.Trap2Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap3:
-                    Next = new StageInfo(Managers.Scene.Trap3Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap4:
-                    Next = new StageInfo(Managers.Scene.Trap4Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap5:
-                    Next = new StageInfo(Managers.Scene.Trap5Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap6:
-                    Next = new StageInfo(Managers.Scene.Trap6Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap7:
-                    Next = new StageInfo(Managers.Scene.Trap7Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap8:
-                    Next = new StageInfo(Managers.Scene.Trap8Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap9:
-                    Next = new StageInfo(Managers.Scene.Trap9Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap10:
-                    Next = new StageInfo(Managers.Scene.Trap10Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap11:
-                    Next = new StageInfo(Managers.Scene.Trap11Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap12:
-                    Next = new StageInfo(Managers.Scene.Trap12Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap13:
-                    Next = new StageInfo(Managers.Scene.Trap13Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap14:
-                    Next = new StageInfo(Managers.Scene.Trap14Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap15:
-                    Next = new StageInfo(Managers.Scene.Trap15Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap16:
-                    Next = new StageInfo(Managers.Scene.Trap16Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap17:
-                    Next = new StageInfo(Managers.Scene.Trap17Scene, _isCorrect);
-                    break;
-
-                case SceneNumber.Trap18:
-                    Next = new StageInfo(Managers.Scene.Trap18Scene, _isCorrect);
-                    break;
-            }
+            Next = traps[Random.Range(0, traps.Count)];
+            traps.Remove(Next);
         }
         else
         {
             _isCorrect = true;
             Next = new StageInfo(Managers.Scene.CorrectScene, _isCorrect);
         }
+    }
+
+    private void ResetTraps()
+    {
+        traps.Add(new StageInfo(new Trap1Scene(), false));
+        traps.Add(new StageInfo(new Trap2Scene(), false));
+        traps.Add(new StageInfo(new Trap3Scene(), false));
+        traps.Add(new StageInfo(new Trap4Scene(), false));
+        traps.Add(new StageInfo(new Trap5Scene(), false));
+        traps.Add(new StageInfo(new Trap6Scene(), false));
+        traps.Add(new StageInfo(new Trap7Scene(), false));
+        traps.Add(new StageInfo(new Trap8Scene(), false));
+        traps.Add(new StageInfo(new Trap9Scene(), false));
+        traps.Add(new StageInfo(new Trap10Scene(), false));
+        traps.Add(new StageInfo(new Trap11Scene(), false));
+        traps.Add(new StageInfo(new Trap12Scene(), false));
+        traps.Add(new StageInfo(new Trap13Scene(), false));
+        traps.Add(new StageInfo(new Trap14Scene(), false));
+        traps.Add(new StageInfo(new Trap15Scene(), false));
+        traps.Add(new StageInfo(new Trap16Scene(), false));
+        traps.Add(new StageInfo(new Trap17Scene(), false));
+        traps.Add(new StageInfo(new Trap18Scene(), false));
     }
 }
