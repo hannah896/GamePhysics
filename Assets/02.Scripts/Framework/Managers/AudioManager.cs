@@ -38,26 +38,14 @@ public class AudioManager
         {
             case SoundType.Master:
                 Mixer.SetFloat("Master", dB);
-                
-                Mixer.GetFloat("Master", out float val);
-                Util.Log("Master: " +val.ToString());
-                
                 data.ALL = value;
                 break;
             case SoundType.BGM:
                 Mixer.SetFloat("BGM", dB);
-
-                Mixer.GetFloat("BGM", out float v);
-                Util.Log("BGM: " + v.ToString());
-                
                 data.BGM = value;
                 break;
             case SoundType.SFX:
                 Mixer.SetFloat("SFX", dB);
-
-                Mixer.GetFloat("SFX", out float va);
-                Util.Log("SFX: " + va.ToString());
-
                 data.SFX = value;
                 break;
         }

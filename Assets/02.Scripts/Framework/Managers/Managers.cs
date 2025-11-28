@@ -13,7 +13,6 @@ public class Managers : Singleton<Managers>
     public static readonly ResourceManager Resource = new();
     public static readonly SceneManager Scene = new();
     public static readonly UIManager UI = new();
-    public static readonly DataManager Data = new();
     public static readonly EffectManager Effect = new();
 
     protected override void Awake()
