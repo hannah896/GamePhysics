@@ -17,6 +17,7 @@ public class AudioObj : Poolable
     private void Start()
     {
         Managers.Audio.SettingData();
+        Util.Log("AudioObj 만들어졋어요!!!!");
     }
 
     public void Init(AudioClip clip)
