@@ -20,7 +20,7 @@ public class StartScene : SceneBase
         // UI 로드
         _ = Managers.Resource.LoadAsync<GameObject>("StartScene/StartUI", go =>
         {
-            if (!Managers.UI.path.TryGetValue(typeof(UIStart), out var path))
+            if (!Managers.UI.path.ContainsKey(typeof(UIStart)))
                 Managers.UI.path.Add(typeof(UIStart), "StartScene/StartUI");
 
             Managers.UI.ShowUI<UIStart>();
@@ -28,12 +28,12 @@ public class StartScene : SceneBase
 
         _ = Managers.Resource.LoadAsync<GameObject>("Common/AudioSettingUI", go =>
         {
-            if (!Managers.UI.path.TryGetValue(typeof(AudioSettingUI), out var path))
+            if (!Managers.UI.path.ContainsKey(typeof(AudioSettingUI)))
                 Managers.UI.path.Add(typeof(AudioSettingUI), "Common/AudioSettingUI");
             
             _ = Managers.Resource.LoadAsync<GameObject>("Common/BG", go =>
             {
-                if (!Managers.UI.path.TryGetValue(typeof(UI_BG), out var path))
+                if (!Managers.UI.path.ContainsKey(typeof(UI_BG) ))
                     Managers.UI.path.Add(typeof(UI_BG), "Common/BG");
             });
         });

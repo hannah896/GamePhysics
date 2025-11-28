@@ -10,14 +10,18 @@ public class CorrectScene : SceneBase
         num = SceneNumber.Correct;
     }
 
+
+    /// <summary>
+    /// 이거 가내 수공업 부탁해!!!!
+    /// </summary>
     public async override void OnEnter()
     {
-
         base.OnEnter();
         // esc UI 로드
         _ = Managers.Resource.LoadAsync<GameObject>("GameScene/PauseUI", go =>
         {
-           Managers.UI.path.Add(typeof(PauseUI), "GameScene/PauseUI");
+            if (!Managers.UI.path.ContainsKey(typeof(PauseUI)))
+                Managers.UI.path.Add(typeof(PauseUI), "GameScene/PauseUI");
         });
 
         // esc Blur 로드
@@ -37,6 +41,10 @@ public class CorrectScene : SceneBase
     {
     }
 
+
+    /// <summary>
+    /// 이거도 가내수공업 부탁해!!!
+    /// </summary>
     public override void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
