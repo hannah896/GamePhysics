@@ -20,8 +20,6 @@ public class AudioManager
     {
         Mixer = mixer;
         this.data = data;
-
-        SettingData();
     }
 
     public void SettingData()

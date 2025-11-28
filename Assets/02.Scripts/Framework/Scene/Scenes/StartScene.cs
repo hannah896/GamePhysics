@@ -20,16 +20,21 @@ public class StartScene : SceneBase
         // UI 로드
         _ = Managers.Resource.LoadAsync<GameObject>("StartScene/StartUI", go =>
         {
-            Managers.UI.path.Add(typeof(UIStart), "StartScene/StartUI");
+            if (!Managers.UI.path.TryGetValue(typeof(UIStart), out var path))
+                Managers.UI.path.Add(typeof(UIStart), "StartScene/StartUI");
+
             Managers.UI.ShowUI<UIStart>();
         });
 
         _ = Managers.Resource.LoadAsync<GameObject>("Common/AudioSettingUI", go =>
         {
-            Managers.UI.path.Add(typeof(AudioSettingUI), "Common/AudioSettingUI");
+            if (!Managers.UI.path.TryGetValue(typeof(AudioSettingUI), out var path))
+                Managers.UI.path.Add(typeof(AudioSettingUI), "Common/AudioSettingUI");
+            
             _ = Managers.Resource.LoadAsync<GameObject>("Common/BG", go =>
             {
-                Managers.UI.path.Add(typeof(UI_BG), "Common/BG");
+                if (!Managers.UI.path.TryGetValue(typeof(UI_BG), out var path))
+                    Managers.UI.path.Add(typeof(UI_BG), "Common/BG");
             });
         });
 
@@ -47,6 +52,7 @@ public class StartScene : SceneBase
         {
             Managers.Audio.Controller.InitBGM(so, BGMName.Start);
         });
+
         await Managers.Resource.LoadAsync<SFXData>("ClipDatas/SFXDatas", so =>
         {
             Managers.Audio.Controller.InitSFX(so);

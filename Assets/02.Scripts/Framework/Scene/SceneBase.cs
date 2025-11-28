@@ -10,6 +10,7 @@ public abstract class SceneBase : StateBase
     /// </summary>
     public override void OnEnter()
     {
+        Time.timeScale = 1f;
         Managers.UI.Init();
     }
 

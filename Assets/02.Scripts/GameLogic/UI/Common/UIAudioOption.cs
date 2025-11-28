@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIOption : UI_Button
+public class UIAudioOption : UI_Button
 {
     [SerializeField] private Button OptionBtn;
 

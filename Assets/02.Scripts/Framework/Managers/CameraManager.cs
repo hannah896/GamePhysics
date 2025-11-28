@@ -1,33 +1,47 @@
 using System.Threading.Tasks;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 public class CameraManager
 {
-    public Volume GlobalVolume { get; private set; }
+    private Volume _volume;
+    public Volume Volume
+    {
+        get
+        {
+            if (_volume == null)
+                Init();
+            return _volume;
+        }
+
+        private set { }
+    }
+
     /// <summary>
     /// 씬 전환시 실행시켜줘야 함.
     /// </summary>
     public void Init()
     {
-        var cam = Camera.main;
-        var v = cam.GetComponentInChildren<Volume>(true);
-        if (v == null)
+        try
+        {
+            var v = Camera.main.GetComponentInChildren<Volume>(true);
+            _volume = v;
+            _volume.gameObject.SetActive(false);
+        }
+        catch
         {
             Managers.Resource.Instantiate("Common/GlobalVolume", go =>
             {
-                go.transform.SetParent(cam.transform);
+                go.transform.SetParent(Camera.main.transform);
                 go.transform.localPosition = Vector3.zero;
-                GlobalVolume = go.GetComponent<Volume>();
+                go.transform.localRotation = Quaternion.Euler(Vector3.zero);
+                go.transform.localScale = Vector3.one;
+                
+                _volume = go.GetComponent<Volume>();
                 go.SetActive(false);
             });
-
-        }
-        else
-        {
-            GlobalVolume = v;
-            GlobalVolume.gameObject.SetActive(false);
         }
     }
 }

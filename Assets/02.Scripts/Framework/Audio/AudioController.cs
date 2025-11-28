@@ -17,7 +17,8 @@ public class AudioController
         // 딕셔너리에 싹다 등록
         foreach (var bgm in so.audioClips)
         {
-            bgmData.Add(bgm._name, bgm._audioClip);
+            if (!bgmData.TryGetValue(bgm._name, out var clip))
+                bgmData.Add(bgm._name, bgm._audioClip);
         }
         Managers.Audio.SettingData();
         PlayBGM(startBGM);
@@ -29,7 +30,8 @@ public class AudioController
         // 딕셔너리에 싹다 등록
         foreach (var sfx in so.audioClips)
         {
-            sfxData.Add(sfx._name, sfx._audioClip);
+            if (!sfxData.TryGetValue(sfx._name, out var clip))
+                sfxData.Add(sfx._name, sfx._audioClip);
         }
     }
 
