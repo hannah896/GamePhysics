@@ -119,13 +119,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!43 &631851153
+--- !u!4 &810014186 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7296563044221949692, guid: 709d0939d77268741b7024fce53dd4e4, type: 3}
+  m_PrefabInstance: {fileID: 1593368707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!43 &844020515
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterVolume--543756
+  m_Name: WaterVolume--417324
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -284,11 +289,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &810014186 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7296563044221949692, guid: 709d0939d77268741b7024fce53dd4e4, type: 3}
-  m_PrefabInstance: {fileID: 1593368707}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1593368707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -620,7 +620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4951236939494440057, guid: 39eae6c1d971bce4bbfe2eb783c940c2, type: 3}
       propertyPath: m_Name
-      value: CorrectMap
+      value: Trap13
       objectReference: {fileID: 0}
     - target: {fileID: 6550344584630319075, guid: 39eae6c1d971bce4bbfe2eb783c940c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -665,7 +665,7 @@ PrefabInstance:
     - target: {fileID: 7316187273646171909, guid: 39eae6c1d971bce4bbfe2eb783c940c2, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 631851153}
+      objectReference: {fileID: 844020515}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
