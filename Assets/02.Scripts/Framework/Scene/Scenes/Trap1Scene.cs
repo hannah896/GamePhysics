@@ -35,9 +35,6 @@ public class Trap1Scene : SceneBase
 
     }
 
-    /// <summary>
-    /// 이거도 가내수공업 부탁해!!!
-    /// </summary>
     public override void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
