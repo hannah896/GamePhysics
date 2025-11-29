@@ -125,7 +125,7 @@ public static class Enums
         Horror,
         Dance,
         Ending,
-        EndingCredit, 
+        EndingCredit,
         Count,
     }
 

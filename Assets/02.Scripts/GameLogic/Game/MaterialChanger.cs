@@ -26,7 +26,7 @@ public class MaterialChanger : MonoBehaviour
         {
             if (Managers.Game.GoalCount ==  0)
                 return;
-            Renderer.material = Materials[(int)Managers.Game.GoalCount- (int)Managers.Game.CurrentCount];
+            Renderer.material = Materials[(int)Managers.Game.GoalCount- (int)Managers.Game.CurrentCount -1 ];
         }
     }
 }
