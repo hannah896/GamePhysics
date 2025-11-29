@@ -55,6 +55,8 @@ public static class Enums
         Trap16,
         Trap17,
         Trap18,
+        Ending,
+        EndingCredit,
         Count,
     }
     public enum Level
@@ -122,6 +124,8 @@ public static class Enums
         Game,
         Horror,
         Dance,
+        Ending,
+        EndingCredit, 
         Count,
     }
 
