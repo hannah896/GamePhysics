@@ -8,7 +8,7 @@ public class MusicZone : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerController>().IsDance = true;
-            //Managers.Audio.Controller.PlayBGM(BGMName.Dance);
+            Managers.Audio.Controller.PlayBGM(BGMName.Dance);
         }
     }
 }
