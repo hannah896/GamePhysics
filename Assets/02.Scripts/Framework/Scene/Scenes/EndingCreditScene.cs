@@ -5,13 +5,17 @@ public class EndingCreditScene : SceneBase
 {
     public EndingCreditScene()
     {
-        num = SceneNumber.EndingCredit;
+        num = Enums.SceneNumber.EndingCredit;
     }
 
-    public async override void OnEnter()
+    public override void FixedUpdate()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void OnEnter()
     {
         base.OnEnter();
-        // BGM 재생.
         Managers.Audio.Controller.PlayBGM(BGMName.EndingCredit);
     }
 
@@ -20,12 +24,10 @@ public class EndingCreditScene : SceneBase
         base.OnExit();
     }
 
-
-    public override void FixedUpdate()
-    {
-    }
-
     public override void Update()
     {
+        throw new System.NotImplementedException();
     }
+
+
 }
