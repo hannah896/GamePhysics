@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -34,6 +35,11 @@ public abstract class UI_Button : UIPermanent
 
     public virtual void OnClickButton(int value)
     {
-        //Managers.Game.();
+
+    }
+
+    public virtual void OnClickButton(TMP_InputField value)
+    {
+
     }
 }
