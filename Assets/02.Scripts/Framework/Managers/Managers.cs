@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Managers : Singleton<Managers>
 {
@@ -13,7 +9,6 @@ public class Managers : Singleton<Managers>
     public static readonly ResourceManager Resource = new();
     public static readonly SceneManager Scene = new();
     public static readonly UIManager UI = new();
-    public static readonly EffectManager Effect = new();
 
     protected override void Awake()
     {

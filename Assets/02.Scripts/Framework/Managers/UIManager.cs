@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst.Intrinsics;
 using UnityEngine;
-using static Enums;
 
 public class UIManager
 {
@@ -43,11 +40,11 @@ public class UIManager
     /// 컴포넌트로 UI 생성 및 캔버스 배치
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public void ShowUI<T>(bool isStatic = false, Action<T> onComplete = null) where T: UI_Base
+    public void ShowUI<T>(bool isStatic = false, Action<T> onComplete = null) where T : UI_Base
     {
         Util.Log(typeof(T).Name);
 
-        
+
         if (!path.TryGetValue(typeof(T), out string _path))
         {
             Util.LogError("해당 컴포넌트 경로 미등록");

@@ -15,7 +15,7 @@ public class UIStart : UI_Button
     public override void OnClickButton()
     {
         base.OnClickButton();
-        
+
         transform.parent.parent.DOMoveX(-1635, 0.5f).SetEase(Ease.OutExpo);
     }
 }

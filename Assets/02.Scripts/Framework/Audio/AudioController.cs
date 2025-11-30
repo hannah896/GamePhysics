@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using static Enums;
 
 public class AudioController
@@ -56,7 +54,7 @@ public class AudioController
             audio.Init(bgm);
             bgmAudioSource.outputAudioMixerGroup = Managers.Audio.Mixer.FindMatchingGroups("BGM")[0];
             audio.audioSource.loop = true;
-            
+
             Util.Log("BGM 재생되나요");
             bgmAudioSource.Play();
         });

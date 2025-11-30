@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 // 오브젝트 풀들을 관리하는 풀 매니저
 public class PoolManager
@@ -28,7 +27,7 @@ public class PoolManager
     /// <returns>풀에 존재하는 오브젝트 or null</returns>
     public GameObject Get(string key)
     {
-        
+
         if (pools.TryGetValue(key, out var pool) == false) return null;
 
         return pool.Get();
@@ -51,7 +50,7 @@ public class PoolManager
             // 일반 오브젝트용 풀
             else
                 pool = new(key, transform);
-            
+
             pools.Add(key, pool);
         }
         pool.Release(poolable);

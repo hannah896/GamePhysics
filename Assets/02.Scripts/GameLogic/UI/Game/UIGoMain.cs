@@ -1,4 +1,3 @@
-
 public class UIGoMain : UI_Button
 {
     public override void Init()

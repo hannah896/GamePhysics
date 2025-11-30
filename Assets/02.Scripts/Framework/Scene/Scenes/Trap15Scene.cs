@@ -26,7 +26,7 @@ public class Trap15Scene : SceneBase
         Managers.Audio.Controller.PlayBGM(BGMName.Game);
     }
 
-    public override void OnExit()
+    public override async void OnExit()
     {
         base.OnExit();
     }

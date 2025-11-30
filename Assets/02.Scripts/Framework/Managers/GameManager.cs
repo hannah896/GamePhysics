@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 using static Enums;
@@ -23,7 +22,7 @@ public class GameManager
         public StageInfo(SceneBase map, bool iscorrect)
         {
             this.scene = map;
-            this.IsCorrect = iscorrect; 
+            this.IsCorrect = iscorrect;
         }
     }
 
@@ -79,7 +78,7 @@ public class GameManager
     public void CalculateNextMap()
     {
         bool _isCorrect;
-        
+
         //70%확률로 트랩맵 당첨
         if (Random.Range(0, 100) > 30)
         {

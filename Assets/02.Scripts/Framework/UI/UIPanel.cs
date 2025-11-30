@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using UnityEngine;
-
 public class UIPanel : UIPopup
 {
     public override void Init()

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AudioSettingUI : UIPanel
 {
@@ -30,7 +29,7 @@ public class AudioSettingUI : UIPanel
         {
             ALLSlider.SetALL(value);
         });
-        
+
         BGMSlider.Slider.onValueChanged.AddListener((value) =>
         {
             BGMSlider.SetBGM(value);
