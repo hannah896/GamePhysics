@@ -11,6 +11,8 @@ public class Trap1Scene : SceneBase
     public override void OnEnter()
     {
         base.OnEnter();
+        Cursor.visible = false;
+
         // esc UI 로드
         _ = Managers.Resource.LoadAsync<GameObject>("GameScene/PauseUI", go =>
         {
@@ -40,6 +42,7 @@ public class Trap1Scene : SceneBase
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Managers.UI.ShowUI<PauseUI>();
+            Cursor.visible = true;
         }
     }
 }

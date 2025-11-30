@@ -15,6 +15,7 @@ public class CorrectScene : SceneBase
     public async override void OnEnter()
     {
         base.OnEnter();
+        Cursor.visible = false;
         // esc UI 로드
         _ = Managers.Resource.LoadAsync<GameObject>("GameScene/PauseUI", go =>
         {
@@ -48,6 +49,7 @@ public class CorrectScene : SceneBase
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Managers.UI.ShowUI<PauseUI>();
+            Cursor.visible = true;
         }
     }
 }
