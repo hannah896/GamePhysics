@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class PlayerDeadState : PlayerStateBase
@@ -26,8 +27,9 @@ public class PlayerDeadState : PlayerStateBase
     {
     }
 
-    private void Reload()
+    private async void Reload()
     {
+        await UniTask.Delay(7500);
         Managers.Game.Check(false);
     }
 }

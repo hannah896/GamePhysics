@@ -10,7 +10,6 @@ public class EndingCreditScene : SceneBase
 
     public override void FixedUpdate()
     {
-        throw new System.NotImplementedException();
     }
 
     public override void OnEnter()
@@ -26,8 +25,5 @@ public class EndingCreditScene : SceneBase
 
     public override void Update()
     {
-        throw new System.NotImplementedException();
     }
-
-
 }
