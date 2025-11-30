@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static Enums;
 
@@ -8,7 +7,7 @@ using static Enums;
 public abstract class UI_Button : UIPermanent
 {
     protected Button button;
-    protected int targetValue; 
+    protected int targetValue;
 
     private void Awake()
     {

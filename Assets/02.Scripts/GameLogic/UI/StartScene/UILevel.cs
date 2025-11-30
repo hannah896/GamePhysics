@@ -1,4 +1,3 @@
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using static Enums;
@@ -25,7 +24,7 @@ public class UILevel : UI_Button
     public override void OnClickButton(int value)
     {
         base.OnClickButton();
-        Managers.Game.Init((Level) value);
+        Managers.Game.Init((Level)value);
         Util.Log(value.ToString());
     }
 }

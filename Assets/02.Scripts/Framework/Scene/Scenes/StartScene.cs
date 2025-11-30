@@ -1,7 +1,5 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.InputSystem.XR;
 using static Enums;
 
 
@@ -30,10 +28,10 @@ public class StartScene : SceneBase
         {
             if (!Managers.UI.path.ContainsKey(typeof(AudioSettingUI)))
                 Managers.UI.path.Add(typeof(AudioSettingUI), "Common/AudioSettingUI");
-            
+
             _ = Managers.Resource.LoadAsync<GameObject>("Common/BG", go =>
             {
-                if (!Managers.UI.path.ContainsKey(typeof(UI_BG) ))
+                if (!Managers.UI.path.ContainsKey(typeof(UI_BG)))
                     Managers.UI.path.Add(typeof(UI_BG), "Common/BG");
             });
         });

@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.Rendering;
 using static Enums;
 
 public class CorrectScene : SceneBase

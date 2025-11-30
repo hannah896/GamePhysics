@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public static class Enums
 {
     public enum ChangeType
@@ -81,7 +79,7 @@ public static class Enums
 
     public enum CanvasType
     {
-        Static, 
+        Static,
         Dynamic,
         Count,
     }

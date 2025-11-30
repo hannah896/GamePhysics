@@ -40,6 +40,10 @@ public class PlayerWalkState : PlayerStateBase
     public override void Update()
     {
         base.Update();
+        
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
+
         // 가만히 있으면 대기 상태
         if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
         {
@@ -54,9 +58,6 @@ public class PlayerWalkState : PlayerStateBase
             StateMachine.ChangeState(animData.RunState);
             return;
         }
-
-        x = Input.GetAxis("Horizontal");
-        z = Input.GetAxis("Vertical");
     }
 
     private void PlaySound()

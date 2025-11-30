@@ -1,13 +1,12 @@
 using System;
-using UnityEngine;
 
-public class StateMachine<T> where T: StateBase
+public class StateMachine<T> where T : StateBase
 {
     public virtual T CurrentState { get; protected set; }
 
     public Action Update;
     public Action FixedUpdate;
-    
+
     public virtual void Init(T state)
     {
         CurrentState = state;
@@ -17,7 +16,7 @@ public class StateMachine<T> where T: StateBase
         FixedUpdate += CurrentState.FixedUpdate;
     }
 
-    public virtual void ChangeState(T Nextstate) 
+    public virtual void ChangeState(T Nextstate)
     {
         Util.Log($"State Change : {CurrentState?.GetType().Name} -> {Nextstate?.GetType().Name}");
         CurrentState?.OnExit();

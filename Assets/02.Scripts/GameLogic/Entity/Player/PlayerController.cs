@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public bool IsDead { get; set; } = false;
     public bool IsDance { get; set; } = false;
 
-    private void OnValidate()
+    private void Awake()
     {
         if (rb == null)
         {
@@ -44,7 +42,7 @@ public class PlayerController : MonoBehaviour
         AnimData.Init(this);
     }
 
-    
+
 
     private void Update()
     {

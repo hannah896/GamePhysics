@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using static Enums;
 
 public class BlickLight : MonoBehaviour
 {
     [SerializeField] Light light;
-    [SerializeField] Renderer renderer; 
+    [SerializeField] Renderer renderer;
     [SerializeField] Material mat;
 
     public static float speed = 7f;

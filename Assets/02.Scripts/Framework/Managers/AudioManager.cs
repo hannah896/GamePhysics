@@ -1,8 +1,6 @@
-using System;
-using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.Audio;
 using static Enums;
-using static UnityEngine.Rendering.DebugUI;
 
 public class AudioManager
 {
@@ -10,7 +8,7 @@ public class AudioManager
 
     public AudioController Controller = new();
     public AudioMixer Mixer;
-    
+
     public VolumeData Data { get => data; }
 
     /// <summary>
