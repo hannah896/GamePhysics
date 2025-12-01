@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public bool IsDead { get; set; } = false;
     public bool IsDance { get; set; } = false;
 
+    public Vector3 PrePos { get; private set; }
+
     private void Awake()
     {
         if (rb == null)
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
         {
             Anim = GetComponent<Animator>();
         }
+        PrePos = transform.position;
     }
 
     private void Start()

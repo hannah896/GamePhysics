@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Looper : MonoBehaviour
 {
-    public OXChecker O;
-    public OXChecker X;
+    public OXChecker[] Os;
+    public OXChecker[] Xs;
 
     public Action Correct => () => { Managers.Game.Check(true); };
     public Action InCorrect => () => { Managers.Game.Check(false); };
@@ -12,23 +12,28 @@ public class Looper : MonoBehaviour
 
     private void Start()
     {
-        O.trigger += () =>
+        foreach(var O in Os)
         {
-            Util.Log("트리거 작동되나요");
-            if (Managers.Game.Current.IsCorrect)
-                Correct?.Invoke();
-            else
-                InCorrect?.Invoke();
-        };
+            O.trigger += () =>
+            {
+                Util.Log("트리거 작동되나요");
+                if (Managers.Game.Current.IsCorrect)
+                    Correct?.Invoke();
+                else
+                    InCorrect?.Invoke();
+            };
+        }
 
-        X.trigger += () =>
+        foreach (var X in Xs)
         {
-            Util.Log("트리거 작동되나요??");
-            if (!Managers.Game.Current.IsCorrect)
-                Correct?.Invoke();
-            else
-                InCorrect?.Invoke();
-        };
-
+            X.trigger += () =>
+            {
+                Util.Log("트리거 작동되나요??");
+                if (!Managers.Game.Current.IsCorrect)
+                    Correct?.Invoke();
+                else
+                    InCorrect?.Invoke();
+            };
+        }
     }
 }

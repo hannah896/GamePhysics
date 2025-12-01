@@ -5,6 +5,7 @@ public class PauseUI : UIPermanent
     public override void Init()
     {
         base.Init();
+        Cursor.visible = true;
         Managers.Cam.Volume.gameObject.SetActive(true);
         Time.timeScale = 0f;
     }
