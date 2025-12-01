@@ -13,7 +13,7 @@ public class Professor : MonoBehaviour
 
     private void Start()
     {
-        if (Managers.Game.Current.scene == Managers.Scene.Trap8Scene)
+        if (Managers.Game.Current.scene.num == Managers.Scene.Trap8Scene.num)
             animator.SetBool("isTrap8", true);
         else
         {
